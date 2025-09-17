@@ -79,8 +79,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_link2">
     <inertial>
@@ -120,8 +120,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_link3">
     <inertial>
@@ -161,8 +161,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_link4">
     <inertial>
@@ -212,8 +212,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_link5">
     <inertial>
@@ -263,8 +263,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_link6">
     <inertial>
@@ -314,8 +314,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_link7">
     <inertial>
@@ -355,8 +355,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm1_foot_link">
     <inertial>
@@ -439,8 +439,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_link2">
     <inertial>
@@ -480,8 +480,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_link3">
     <inertial>
@@ -521,8 +521,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_link4">
     <inertial>
@@ -572,8 +572,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_link5">
     <inertial>
@@ -623,8 +623,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_link6">
     <inertial>
@@ -674,8 +674,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_link7">
     <inertial>
@@ -715,8 +715,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm2_foot_link">
     <inertial>
@@ -799,8 +799,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_link2">
     <inertial>
@@ -840,8 +840,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_link3">
     <inertial>
@@ -881,8 +881,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_link4">
     <inertial>
@@ -932,8 +932,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_link5">
     <inertial>
@@ -983,8 +983,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_link6">
     <inertial>
@@ -1034,8 +1034,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_link7">
     <inertial>
@@ -1075,8 +1075,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm3_foot_link">
     <inertial>
@@ -1159,8 +1159,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_link2">
     <inertial>
@@ -1200,8 +1200,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_link3">
     <inertial>
@@ -1241,8 +1241,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_link4">
     <inertial>
@@ -1292,8 +1292,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_link5">
     <inertial>
@@ -1343,8 +1343,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_link6">
     <inertial>
@@ -1394,8 +1394,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="0.174"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_link7">
     <inertial>
@@ -1435,8 +1435,8 @@ Stephen Brawner (brawner@gmail.com)
     <limit
         lower="-3.14"
         upper="3.14"
-        effort="10"
-        velocity="10" />
+        effort="300"
+        velocity="100" />
   </joint>
   <link name="arm4_foot_link">
     <inertial>
