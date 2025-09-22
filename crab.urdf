@@ -118,8 +118,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm1_link2" />
     <axis xyz="0 -1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -312,8 +312,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm1_link6" />
     <axis xyz="0 -1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -478,8 +478,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm2_link2" />
     <axis xyz="0 1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -672,8 +672,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm2_link6" />
     <axis xyz="0 1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -838,8 +838,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm3_link2" />
     <axis xyz="0 -1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -1032,8 +1032,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm3_link6" />
     <axis xyz="0 -1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -1198,8 +1198,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm4_link2" />
     <axis xyz="0 1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
@@ -1392,8 +1392,8 @@ Stephen Brawner (brawner@gmail.com)
     <child link="arm4_link6" />
     <axis xyz="0 1 0" />
     <limit
-        lower="-3.14"
-        upper="0.174"
+        lower="-0.174"
+        upper="3.14"
         effort="300"
         velocity="100" />
   </joint>
