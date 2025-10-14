@@ -32,9 +32,10 @@ Stephen Brawner (brawner@gmail.com)
     <collision>
       <origin
           xyz="0 0 0"
-          rpy="0 0 0" />
+          rpy="0 0 0.78" />
       <geometry>
-        <mesh filename="meshes/base_link_collision.STL" />
+        <!-- <mesh filename="meshes/base_link_collision.STL" /> -->
+        <box size="0.4 0.4 0.15" />
       </geometry>
     </collision>
   </link>
@@ -165,6 +166,12 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.04" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm1_j2"
@@ -206,6 +213,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0.0225 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link3.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm1_j3"
@@ -247,7 +261,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 0 0"
           rpy="1.57 0 0" />
@@ -255,6 +269,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.0825"
             radius="0.035" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
       </geometry>
     </collision>
   </link>
@@ -349,7 +370,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 0.007 0"
           rpy="1.57 0 0" />
@@ -357,6 +378,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.06"
             radius="0.025" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.02" />
       </geometry>
     </collision>
   </link>
@@ -525,6 +553,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.04" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm2_j2"
@@ -566,6 +601,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0.0225 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link3.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm2_j3"
@@ -607,7 +649,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 0 0"
           rpy="1.57 0 0" />
@@ -615,6 +657,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.0825"
             radius="0.035" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
       </geometry>
     </collision>
   </link>
@@ -709,7 +758,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 -0.007 0"
           rpy="1.57 0 0" />
@@ -717,6 +766,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.06"
             radius="0.025" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.02" />
       </geometry>
     </collision>
   </link>
@@ -885,6 +941,14 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.04" />
+      </geometry>
+    </collision>
+
   </link>
   <joint
       name="arm3_j2"
@@ -926,6 +990,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="-0.0225 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link3.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm3_j3"
@@ -967,7 +1038,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 0 0"
           rpy="1.57 0 0" />
@@ -975,6 +1046,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.0825"
             radius="0.035" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
       </geometry>
     </collision>
   </link>
@@ -1018,7 +1096,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="-0.035 0 0"
           rpy="0 1.57 0" />
@@ -1026,6 +1104,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.07"
             radius="0.025" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="-0.035 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link3.STL" /> -->
+        <cylinder length="0.07" radius="0.025" />
       </geometry>
     </collision>
   </link>
@@ -1069,7 +1154,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 0.007 0"
           rpy="1.57 0 0" />
@@ -1077,6 +1162,12 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.06"
             radius="0.025" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.02" />
       </geometry>
     </collision>
   </link>
@@ -1245,6 +1336,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.04" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm4_j2"
@@ -1286,6 +1384,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="-0.0225 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link3.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
+      </geometry>
+    </collision>
   </link>
   <joint
       name="arm4_j3"
@@ -1327,7 +1432,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 0 0"
           rpy="1.57 0 0" />
@@ -1335,6 +1440,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.0825"
             radius="0.035" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link4.STL" /> -->
+        <cylinder length="0.05" radius="0.03" />
       </geometry>
     </collision>
   </link>
@@ -1378,7 +1490,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="-0.035 0 0"
           rpy="0 1.57 0" />
@@ -1386,6 +1498,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.07"
             radius="0.025" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="-0.035 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link3.STL" /> -->
+        <cylinder length="0.07" radius="0.025" />
       </geometry>
     </collision>
   </link>
@@ -1429,7 +1548,7 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
           xyz="0 -0.007 0"
           rpy="1.57 0 0" />
@@ -1437,6 +1556,13 @@ Stephen Brawner (brawner@gmail.com)
         <cylinder
             length="0.06"
             radius="0.025" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <!-- <mesh filename="meshes/arm4_link2.STL" /> -->
+        <cylinder length="0.05" radius="0.02" />
       </geometry>
     </collision>
   </link>
