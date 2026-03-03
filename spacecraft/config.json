@@ -1,0 +1,9 @@
+{
+    "url": "https://cad.onshape.com/documents/aa59b79e8f8e201c149c4712/w/4adf8806271a0161d09e2800/e/d2e29b41978ec6ed143989b6",
+    "output_format": "urdf", 
+    "color":null,
+    "draw_frames":false,
+    "draw_collisions":false,
+    "use_fixed_links":true
+}
+

@@ -1,0 +1,1421 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/aa59b79e8f8e201c149c4712/w/4adf8806271a0161d09e2800/e/d2e29b41978ec6ed143989b6 -->
+<robot name="satellite_urdf">
+  <!-- Link satellite_body -->
+  <link name="satellite_body">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+  </link>
+  <!-- Link satellite_body_satelliitedishbig -->
+  <link name="satellite_body_satelliitedishbig">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part satelliitedishbig -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+      <material name="satelliitedishbig_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_satelliitedishbig -->
+  <joint name="satellite_body_satelliitedishbig_fixed" type="fixed">
+    <origin xyz="0.270496 1.01185 5.11688" rpy="1.58982 -0.000727603 -1.58814"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_satelliitedishbig"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_1 -->
+  <link name="satellite_body_part_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_1 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_1 -->
+  <joint name="satellite_body_part_1_fixed" type="fixed">
+    <origin xyz="-2.2843 0.666025 3.00873" rpy="3.14159 0 0.0184715"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_satelliitedishbig_2 -->
+  <link name="satellite_body_satelliitedishbig_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part satelliitedishbig_2 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+      <material name="satelliitedishbig_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_satelliitedishbig_2 -->
+  <joint name="satellite_body_satelliitedishbig_2_fixed" type="fixed">
+    <origin xyz="0.270496 -0.239804 5.11688" rpy="1.58982 0.000727603 -1.55345"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_satelliitedishbig_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel3_1 -->
+  <link name="satellite_body_solar_panel3_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel3_1 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3_1.stl"/>
+      </geometry>
+      <material name="solar_panel3_1_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel3_1 -->
+  <joint name="satellite_body_solar_panel3_1_fixed" type="fixed">
+    <origin xyz="-1.65782 -5.19627 3.00884" rpy="3.14159 -0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel3_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_1_2 -->
+  <link name="satellite_body_part_1_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_1_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+      <material name="part_1_2_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_1_2 -->
+  <joint name="satellite_body_part_1_2_fixed" type="fixed">
+    <origin xyz="-1.6343 -0.228975 3.68873" rpy="-1.5708 0 -3.14159"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_1_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire3 -->
+  <link name="satellite_body_fire3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire3 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire3.stl"/>
+      </geometry>
+      <material name="fire3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire3 -->
+  <joint name="satellite_body_fire3_fixed" type="fixed">
+    <origin xyz="-3.12726 -1.30323 3.80743" rpy="0.0808791 1.38692 1.62267"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire -->
+  <link name="satellite_body_fire">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire -->
+    <visual>
+      <origin xyz="0 -0 -0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/fire.stl"/>
+      </geometry>
+      <material name="fire_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/fire.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire -->
+  <joint name="satellite_body_fire_fixed" type="fixed">
+    <origin xyz="-2.98926 -0.30053 4.16311" rpy="1.35493 -0.952668 1.74764"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire1 -->
+  <link name="satellite_body_fire1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire1 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire1.stl"/>
+      </geometry>
+      <material name="fire1_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire1 -->
+  <joint name="satellite_body_fire1_fixed" type="fixed">
+    <origin xyz="-2.79452 -0.26053 2.72721" rpy="0 -1.44635 3.14159"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_2 -->
+  <link name="satellite_body_part_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+      <material name="part_2_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_2 -->
+  <joint name="satellite_body_part_2_fixed" type="fixed">
+    <origin xyz="-2.27931 0.0343175 2.45877" rpy="-1.55817 0 -1.58927"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire2 -->
+  <link name="satellite_body_fire2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire2.stl"/>
+      </geometry>
+      <material name="fire2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire2 -->
+  <joint name="satellite_body_fire2_fixed" type="fixed">
+    <origin xyz="-3.12049 -1.35422 3.97442" rpy="0.184505 -0.115014 -0.0517996"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_1_3 -->
+  <link name="satellite_body_part_1_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_1_3 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+      <material name="part_1_3_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_1_3 -->
+  <joint name="satellite_body_part_1_3_fixed" type="fixed">
+    <origin xyz="-1.6343 1.00102 3.68873" rpy="-1.5708 0 0"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_1_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_2_2 -->
+  <link name="satellite_body_part_2_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_2_2 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+      <material name="part_2_2_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_2_2 -->
+  <joint name="satellite_body_part_2_2_fixed" type="fixed">
+    <origin xyz="-2.29095 0.558077 4.96864" rpy="1.55176 -0 1.51523"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_2_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_2_3 -->
+  <link name="satellite_body_part_2_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_2_3 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+      <material name="part_2_3_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_2_3 -->
+  <joint name="satellite_body_part_2_3_fixed" type="fixed">
+    <origin xyz="-2.2793 0.737732 2.45877" rpy="-1.58342 0 1.58927"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_2_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_1_4 -->
+  <link name="satellite_body_part_1_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_1_4 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+      <material name="part_1_4_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_1_4 -->
+  <joint name="satellite_body_part_1_4_fixed" type="fixed">
+    <origin xyz="-2.2843 0.106025 3.00873" rpy="3.14159 -0 3.12312"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_1_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part_2_4 -->
+  <link name="satellite_body_part_2_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part_2_4 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+      <material name="part_2_4_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part_2_4 -->
+  <joint name="satellite_body_part_2_4_fixed" type="fixed">
+    <origin xyz="-2.29094 0.213973 4.96864" rpy="1.58984 -0 -1.51523"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part_2_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire3_2 -->
+  <link name="satellite_body_fire3_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire3_2 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/fire3.stl"/>
+      </geometry>
+      <material name="fire3_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/fire3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire3_2 -->
+  <joint name="satellite_body_fire3_2_fixed" type="fixed">
+    <origin xyz="-3.12612 2.09707 3.92474" rpy="0.0808791 -1.38692 1.51892"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire3_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part3 -->
+  <link name="satellite_body_part3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part3 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part3.stl"/>
+      </geometry>
+      <material name="part3_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/part3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part3 -->
+  <joint name="satellite_body_part3_fixed" type="fixed">
+    <origin xyz="-2.2843 0.266025 4.36873" rpy="-0 0 0.0555643"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_satelliitedish2 -->
+  <link name="satellite_body_satelliitedish2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part satelliitedish2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedish2.stl"/>
+      </geometry>
+      <material name="satelliitedish2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedish2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_satelliitedish2 -->
+  <joint name="satellite_body_satelliitedish2_fixed" type="fixed">
+    <origin xyz="-0.705909 0.386025 2.1671" rpy="-1.48897 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_satelliitedish2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire1_2 -->
+  <link name="satellite_body_fire1_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire1_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire1.stl"/>
+      </geometry>
+      <material name="fire1_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire1_2 -->
+  <joint name="satellite_body_fire1_2_fixed" type="fixed">
+    <origin xyz="-3.15424 1.03258 5.60274" rpy="0 1.44635 0"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire1_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel3_1_2 -->
+  <link name="satellite_body_solar_panel3_1_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel3_1_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3_1.stl"/>
+      </geometry>
+      <material name="solar_panel3_1_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel3_1_2 -->
+  <joint name="satellite_body_solar_panel3_1_2_fixed" type="fixed">
+    <origin xyz="-1.65782 5.99032 4.77461" rpy="3.14159 0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel3_1_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_satelliitedishbig_3 -->
+  <link name="satellite_body_satelliitedishbig_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part satelliitedishbig_3 -->
+    <visual>
+      <origin xyz="-0 0 -0" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+      <material name="satelliitedishbig_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_satelliitedishbig_3 -->
+  <joint name="satellite_body_satelliitedishbig_3_fixed" type="fixed">
+    <origin xyz="0.247923 1.31133 2.39079" rpy="-1.58342 0.00014145 1.60047"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_satelliitedishbig_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_part3_2 -->
+  <link name="satellite_body_part3_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part part3_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part3.stl"/>
+      </geometry>
+      <material name="part3_2_material">
+        <color rgba="0.776471 0.756863 0.737255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/part3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_part3_2 -->
+  <joint name="satellite_body_part3_2_fixed" type="fixed">
+    <origin xyz="-2.2843 0.506025 4.36873" rpy="-0 -0 3.08603"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_part3_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_part_2 -->
+  <link name="satellite_body_solar_part_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_part_2 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_part_2.stl"/>
+      </geometry>
+      <material name="solar_part_2_material">
+        <color rgba="0.517647 0.529412 0.54902 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_part_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_part_2 -->
+  <joint name="satellite_body_solar_part_2_fixed" type="fixed">
+    <origin xyz="-1.64028 2.61029 3.68873" rpy="-0 0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_part_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_part_2_2 -->
+  <link name="satellite_body_solar_part_2_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_part_2_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_part_2.stl"/>
+      </geometry>
+      <material name="solar_part_2_2_material">
+        <color rgba="0.517647 0.529412 0.54902 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_part_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_part_2_2 -->
+  <joint name="satellite_body_solar_part_2_2_fixed" type="fixed">
+    <origin xyz="-1.64028 -1.83824 3.68873" rpy="-3.14159 0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_part_2_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire_2 -->
+  <link name="satellite_body_fire_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire_2 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/fire.stl"/>
+      </geometry>
+      <material name="fire_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/fire.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire_2 -->
+  <joint name="satellite_body_fire_2_fixed" type="fixed">
+    <origin xyz="-2.95453 1.07258 4.16745" rpy="1.78666 -0.952668 -1.74764"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_fire2_2 -->
+  <link name="satellite_body_fire2_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part fire2_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire2.stl"/>
+      </geometry>
+      <material name="fire2_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/fire2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_fire2_2 -->
+  <joint name="satellite_body_fire2_2_fixed" type="fixed">
+    <origin xyz="-3.12049 2.12627 3.97442" rpy="2.95709 -0.115014 0.0517996"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_fire2_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_satellite_body -->
+  <link name="satellite_body_satellite_body">
+    <inertial>
+      <origin xyz="0.131702 -0.63097 0.0267787" rpy="0 0 0"/>
+      <mass value="2411.71"/>
+      <inertia ixx="1221" ixy="20.6804" ixz="-185.975" iyy="3086.82" iyz="5.50669" izz="3097.98"/>
+    </inertial>
+    <!-- Part satellite_body -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satellite_body.stl"/>
+      </geometry>
+      <material name="satellite_body_material">
+        <color rgba="0.980392 0.796078 0.262745 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satellite_body.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_satellite_body -->
+  <joint name="satellite_body_satellite_body_fixed" type="fixed">
+    <origin xyz="-1.6343 1.01602 3.68873" rpy="0 -0 0"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_satellite_body"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_satelliitedishbig_4 -->
+  <link name="satellite_body_satelliitedishbig_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part satelliitedishbig_4 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+      <material name="satelliitedishbig_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_satelliitedishbig_4 -->
+  <joint name="satellite_body_satelliitedishbig_4_fixed" type="fixed">
+    <origin xyz="0.247923 -0.539281 2.39079" rpy="-1.58342 -0.00014145 1.54112"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_satelliitedishbig_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel4 -->
+  <link name="satellite_body_solar_panel4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4.stl"/>
+      </geometry>
+      <material name="solar_panel4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel4 -->
+  <joint name="satellite_body_solar_panel4_fixed" type="fixed">
+    <origin xyz="-1.65782 -6.83547 3.68877" rpy="3.14159 -0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel4_2 -->
+  <link name="satellite_body_solar_panel4_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel4_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4__2.stl"/>
+      </geometry>
+      <material name="solar_panel4_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel4_2 -->
+  <joint name="satellite_body_solar_panel4_2_fixed" type="fixed">
+    <origin xyz="-1.65782 -6.83547 3.68877" rpy="3.14159 -0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel4_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel4_3 -->
+  <link name="satellite_body_solar_panel4_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel4_3 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4.stl"/>
+      </geometry>
+      <material name="solar_panel4_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel4_3 -->
+  <joint name="satellite_body_solar_panel4_3_fixed" type="fixed">
+    <origin xyz="-1.65782 7.60752 3.68877" rpy="0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel4_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel4_4 -->
+  <link name="satellite_body_solar_panel4_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel4_4 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4__2.stl"/>
+      </geometry>
+      <material name="solar_panel4_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel4__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel4_4 -->
+  <joint name="satellite_body_solar_panel4_4_fixed" type="fixed">
+    <origin xyz="-1.65782 7.60752 3.68877" rpy="0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel4_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel3 -->
+  <link name="satellite_body_solar_panel3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel3 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3.stl"/>
+      </geometry>
+      <material name="solar_panel3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel3 -->
+  <joint name="satellite_body_solar_panel3_fixed" type="fixed">
+    <origin xyz="-1.65782 5.97032 3.68877" rpy="-0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel3_2 -->
+  <link name="satellite_body_solar_panel3_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel3_2 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3__2.stl"/>
+      </geometry>
+      <material name="solar_panel3_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel3_2 -->
+  <joint name="satellite_body_solar_panel3_2_fixed" type="fixed">
+    <origin xyz="-1.65782 5.97032 3.68877" rpy="-0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel3_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel -->
+  <link name="satellite_body_solar_panel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+      <material name="solar_panel_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel -->
+  <joint name="satellite_body_solar_panel_fixed" type="fixed">
+    <origin xyz="-1.65782 -1.92388 3.68877" rpy="3.14159 0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_2 -->
+  <link name="satellite_body_solar_panel_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+      <material name="solar_panel_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_2 -->
+  <joint name="satellite_body_solar_panel_2_fixed" type="fixed">
+    <origin xyz="-1.65782 -1.92388 3.68877" rpy="3.14159 0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_3 -->
+  <link name="satellite_body_solar_panel_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_3 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+      <material name="solar_panel_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_3 -->
+  <joint name="satellite_body_solar_panel_3_fixed" type="fixed">
+    <origin xyz="-1.65782 2.69593 3.68877" rpy="-0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_4 -->
+  <link name="satellite_body_solar_panel_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+      <material name="solar_panel_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_4 -->
+  <joint name="satellite_body_solar_panel_4_fixed" type="fixed">
+    <origin xyz="-1.65782 2.69593 3.68877" rpy="-0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel3_3 -->
+  <link name="satellite_body_solar_panel3_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel3_3 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3.stl"/>
+      </geometry>
+      <material name="solar_panel3_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel3_3 -->
+  <joint name="satellite_body_solar_panel3_3_fixed" type="fixed">
+    <origin xyz="-1.65782 -5.19827 3.68877" rpy="3.14159 -0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel3_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel3_4 -->
+  <link name="satellite_body_solar_panel3_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel3_4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3__2.stl"/>
+      </geometry>
+      <material name="solar_panel3_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel3__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel3_4 -->
+  <joint name="satellite_body_solar_panel3_4_fixed" type="fixed">
+    <origin xyz="-1.65782 -5.19827 3.68877" rpy="3.14159 -0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel3_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_5 -->
+  <link name="satellite_body_solar_panel_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_5 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+      <material name="solar_panel_5_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_5 -->
+  <joint name="satellite_body_solar_panel_5_fixed" type="fixed">
+    <origin xyz="-1.65782 4.33313 3.68877" rpy="-0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_6 -->
+  <link name="satellite_body_solar_panel_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_6 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+      <material name="solar_panel_6_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_6 -->
+  <joint name="satellite_body_solar_panel_6_fixed" type="fixed">
+    <origin xyz="-1.65782 4.33313 3.68877" rpy="-0 -0 1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_7 -->
+  <link name="satellite_body_solar_panel_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_7 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+      <material name="solar_panel_7_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_7 -->
+  <joint name="satellite_body_solar_panel_7_fixed" type="fixed">
+    <origin xyz="-1.65782 -3.56108 3.68877" rpy="3.14159 0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link satellite_body_solar_panel_8 -->
+  <link name="satellite_body_solar_panel_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part solar_panel_8 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+      <material name="solar_panel_8_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from satellite_body to satellite_body_solar_panel_8 -->
+  <joint name="satellite_body_solar_panel_8_fixed" type="fixed">
+    <origin xyz="-1.65782 -3.56108 3.68877" rpy="3.14159 0 -1.5708"/>
+    <parent link="satellite_body"/>
+    <child link="satellite_body_solar_panel_8"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+</robot>
