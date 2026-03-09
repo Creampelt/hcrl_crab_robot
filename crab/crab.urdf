@@ -259,7 +259,7 @@ Stephen Brawner (brawner@gmail.com)
   <joint name="arm1_j6"
          type="revolute">
     <origin xyz="0.10239375 0.000793749999999789 0.0254"
-            rpy="0 0.5 0" />
+            rpy="0 0 0" />
     <parent link="arm1_link5" />
     <child link="arm1_link6" />
     <axis xyz="0 -1 0" />
@@ -565,7 +565,7 @@ Stephen Brawner (brawner@gmail.com)
   <joint name="arm2_j6"
          type="revolute">
     <origin xyz="0.10239375 -0.000793749999999754 -0.0254000000000001"
-            rpy="0 0.5 0" />
+            rpy="0 0 0" />
     <parent link="arm2_link5" />
     <child link="arm2_link6" />
     <axis xyz="0 1 0" />
@@ -871,7 +871,7 @@ Stephen Brawner (brawner@gmail.com)
   <joint name="arm3_j6"
          type="revolute">
     <origin xyz="-0.10239375 0.000793749999999791 -0.0254"
-            rpy="0 0.5 0" />
+            rpy="0 0 0" />
     <parent link="arm3_link5" />
     <child link="arm3_link6" />
     <axis xyz="0 -1 0" />
@@ -1177,7 +1177,7 @@ Stephen Brawner (brawner@gmail.com)
   <joint name="arm4_j6"
          type="revolute">
     <origin xyz="-0.10239375 -0.000793749999999786 0.0254"
-            rpy="0 0.5 0" />
+            rpy="0 0 0" />
     <parent link="arm4_link5" />
     <child link="arm4_link6" />
     <axis xyz="0 1 0" />
