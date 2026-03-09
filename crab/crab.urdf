@@ -99,7 +99,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="arm1_link1" />
     <child link="arm1_link2" />
     <axis xyz="0 -1 0" />
-    <limit lower="-0.174"
+    <limit lower="-1.57"
            upper="3.14"
            effort="300"
            velocity="100" />
@@ -405,7 +405,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="arm2_link1" />
     <child link="arm2_link2" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.174"
+    <limit lower="-1.57"
            upper="3.14"
            effort="300"
            velocity="100" />
@@ -711,7 +711,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="arm3_link1" />
     <child link="arm3_link2" />
     <axis xyz="0 -1 0" />
-    <limit lower="-0.174"
+    <limit lower="-1.57"
            upper="3.14"
            effort="300"
            velocity="100" />
@@ -1017,7 +1017,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="arm4_link1" />
     <child link="arm4_link2" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.174"
+    <limit lower="-1.57"
            upper="3.14"
            effort="300"
            velocity="100" />
