@@ -6,19 +6,13 @@ Stephen Brawner (brawner@gmail.com)
 <robot name="CRAB_Model_Assembly">
   <link name="base_link">
     <inertial>
-      <origin xyz="-0.000272469695598071 -1.0386219234607E-05 0.021281892746405"
-              rpy="0 0 0" />
+      <origin xyz="-0.000272469695598071 -1.0386219234607E-05 0.021281892746405" rpy="0 0 0" />
       <mass value="11.6672712209698" />
-      <inertia ixx="0.199398893947739"
-               ixy="2.72667883983513E-08"
-               ixz="-2.84657803768238E-05"
-               iyy="0.192550091620116"
-               iyz="-1.96009072087402E-07"
-               izz="0.369355801657632" />
+      <inertia ixx="0.199398893947739" ixy="2.72667883983513E-08" ixz="-2.84657803768238E-05"
+        iyy="0.192550091620116" iyz="-1.96009072087402E-07" izz="0.369355801657632" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/base_link.STL" />
       </geometry>
@@ -27,8 +21,7 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/base_link_collision.STL" />
       </geometry>
@@ -36,19 +29,13 @@ Stephen Brawner (brawner@gmail.com)
   </link>
   <link name="arm1_link1">
     <inertial>
-      <origin xyz="0.0417122714917704 0.0181017342185698 0.0209586636823971"
-              rpy="0 0 0" />
+      <origin xyz="0.0417122714917704 0.0181017342185698 0.0209586636823971" rpy="0 0 0" />
       <mass value="0.935223157536645" />
-      <inertia ixx="0.00115532605987601"
-               ixy="-0.000265241615993485"
-               ixz="-0.000334143346955591"
-               iyy="0.00129069814561315"
-               iyz="-0.000269054545467398"
-               izz="0.00107448935964865" />
+      <inertia ixx="0.00115532605987601" ixy="-0.000265241615993485" ixz="-0.000334143346955591"
+        iyy="0.00129069814561315" iyz="-0.000269054545467398" izz="0.00107448935964865" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link1.STL" />
       </geometry>
@@ -57,33 +44,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm1_j1"
-         type="revolute">
-    <origin xyz="0.127 -0.1778 0"
-            rpy="3.14 0 0" />
+  <joint name="arm1_j1" type="revolute">
+    <origin xyz="0.127 -0.1778 0" rpy="3.14 0 0" />
     <parent link="base_link" />
     <child link="arm1_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.785"
-           upper="1.57"
-           effort="300"
-           velocity="100" />
+    <limit lower="-0.785" upper="1.57" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link2">
     <inertial>
-      <origin xyz="0.0109719288802939 -0.0206328931107901 -0.0100112184839925"
-              rpy="0 0 0" />
+      <origin xyz="0.0109719288802939 -0.0206328931107901 -0.0100112184839925" rpy="0 0 0" />
       <mass value="0.792615281561027" />
-      <inertia ixx="0.000766574618531906"
-               ixy="-0.00017791513660175"
-               ixz="0.000200979427837307"
-               iyy="0.00092218971070779"
-               iyz="0.000157045527656656"
-               izz="0.000788376809197515" />
+      <inertia ixx="0.000766574618531906" ixy="-0.00017791513660175" ixz="0.000200979427837307"
+        iyy="0.00092218971070779" iyz="0.000157045527656656" izz="0.000788376809197515" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link2.STL" />
       </geometry>
@@ -91,34 +67,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.112" radius="0.038" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm1_j2"
-         type="revolute">
-    <origin xyz="0.05794375 0.000793749999999943 0.0381000000000001"
-            rpy="0 0 0" />
+  <joint name="arm1_j2" type="revolute">
+    <origin xyz="0.05794375 0.000793749999999943 0.0381000000000001" rpy="0 0 0" />
     <parent link="arm1_link1" />
     <child link="arm1_link2" />
     <axis xyz="0 -1 0" />
-    <limit lower="-1.57"
-           upper="3.14"
-           effort="300"
-           velocity="100" />
+    <limit lower="-1.57" upper="3.14" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link3">
     <inertial>
-      <origin xyz="0.0549144218630528 0.00846459066691622 0.00980732203635196"
-              rpy="0 0 0" />
+      <origin xyz="0.0549144218630528 0.00846459066691622 0.00980732203635196" rpy="0 0 0" />
       <mass value="0.914578646343627" />
-      <inertia ixx="0.000652366478401666"
-               ixy="-8.91945013993138E-05"
-               ixz="-0.000121260357947482"
-               iyy="0.000661368306540173"
-               iyz="-0.000103242749716624"
-               izz="0.000552144031129009" />
+      <inertia ixx="0.000652366478401666" ixy="-8.91945013993138E-05" ixz="-0.000121260357947482"
+        iyy="0.000661368306540173" iyz="-0.000103242749716624" izz="0.000552144031129009" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link3.STL" />
       </geometry>
@@ -126,34 +97,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0.015 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder length="0.15" radius="0.031" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm1_j3"
-         type="revolute">
-    <origin xyz="0.0547687500000001 0.000793750000000008 -0.03175"
-            rpy="0 0 0" />
+  <joint name="arm1_j3" type="revolute">
+    <origin xyz="0.0547687500000001 0.000793750000000008 -0.03175" rpy="0 0 0" />
     <parent link="arm1_link2" />
     <child link="arm1_link3" />
     <axis xyz="1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link4">
     <inertial>
-      <origin xyz="0.00793319489230659 -0.0168019330034654 -0.0104021954185999"
-              rpy="0 0 0" />
+      <origin xyz="0.00793319489230659 -0.0168019330034654 -0.0104021954185999" rpy="0 0 0" />
       <mass value="0.441334804948817" />
-      <inertia ixx="0.000330987237092191"
-               ixy="-5.77148721763467E-05"
-               ixz="7.97740094389333E-05"
-               iyy="0.00037306172461715"
-               iyz="7.31146265413006E-05"
-               izz="0.000278861245063849" />
+      <inertia ixx="0.000330987237092191" ixy="-5.77148721763467E-05" ixz="7.97740094389333E-05"
+        iyy="0.00037306172461715" iyz="7.31146265413006E-05" izz="0.000278861245063849" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link4.STL" />
       </geometry>
@@ -161,42 +127,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin xyz="0 0 0"
-              rpy="1.57 0 0" />
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.0825"
-                  radius="0.035" />
+        <cylinder length="0.09" radius="0.0325" />
       </geometry>
-    </collision> -->
+    </collision>
   </link>
-  <joint name="arm1_j4"
-         type="revolute">
-    <origin xyz="0.090483750066 0.000793749999999904 0.03175"
-            rpy="0 0 0" />
+  <joint name="arm1_j4" type="revolute">
+    <origin xyz="0.090483750066 0.000793749999999904 0.03175" rpy="0 0 0" />
     <parent link="arm1_link3" />
     <child link="arm1_link4" />
     <axis xyz="0 1 0" />
-    <limit lower="-3.14"
-           upper="0.174"
-           effort="300"
-           velocity="100" />
+    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link5">
     <inertial>
-      <origin xyz="0.0587190828697851 0.00497988704094041 0.00595239165552477"
-              rpy="0 0 0" />
+      <origin xyz="0.0587190828697851 0.00497988704094041 0.00595239165552477" rpy="0 0 0" />
       <mass value="0.632159217766392" />
-      <inertia ixx="0.000255550709127593"
-               ixy="-2.20834314160477E-05"
-               ixz="-3.22005035262905E-05"
-               iyy="0.000357754030193976"
-               iyz="-2.85826511799781E-05"
-               izz="0.000322487907688685" />
+      <inertia ixx="0.000255550709127593" ixy="-2.20834314160477E-05" ixz="-3.22005035262905E-05"
+        iyy="0.000357754030193976" iyz="-2.85826511799781E-05" izz="0.000322487907688685" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link5.STL" />
       </geometry>
@@ -205,41 +158,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0.035 0 0"
-              rpy="0 1.57 0" />
+      <origin xyz="0.035 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.07"
-                  radius="0.025" />
+        <cylinder length="0.15" radius="0.025" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm1_j5"
-         type="revolute">
-    <origin xyz="0.0420687499999999 0.000793750000000015 -0.03175"
-            rpy="0 0 0" />
+  <joint name="arm1_j5" type="revolute">
+    <origin xyz="0.0420687499999999 0.000793750000000015 -0.03175" rpy="0 0 0" />
     <parent link="arm1_link4" />
     <child link="arm1_link5" />
     <axis xyz="1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link6">
     <inertial>
-      <origin xyz="0.00638458341607046 -0.0112857089393424 -0.00502203392889516"
-              rpy="0 0 0" />
+      <origin xyz="0.00638458341607046 -0.0112857089393424 -0.00502203392889516" rpy="0 0 0" />
       <mass value="0.174644981988622" />
-      <inertia ixx="5.86369696509806E-05"
-               ixy="-1.21885255932662E-05"
-               ixz="1.68481377921105E-05"
-               iyy="8.2783177399353E-05"
-               iyz="9.53630787959268E-06"
-               izz="6.25905937971474E-05" />
+      <inertia ixx="5.86369696509806E-05" ixy="-1.21885255932662E-05" ixz="1.68481377921105E-05"
+        iyy="8.2783177399353E-05" iyz="9.53630787959268E-06" izz="6.25905937971474E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link6.STL" />
       </geometry>
@@ -248,41 +188,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0.007 0"
-              rpy="1.57 0 0" />
+      <origin xyz="0 0.0035 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.06"
-                  radius="0.025" />
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm1_j6"
-         type="revolute">
-    <origin xyz="0.10239375 0.000793749999999789 0.0254"
-            rpy="0 0.2 0" />
+  <joint name="arm1_j6" type="revolute">
+    <origin xyz="0.10239375 0.000793749999999789 0.0254" rpy="0 0 0" />
     <parent link="arm1_link5" />
     <child link="arm1_link6" />
     <axis xyz="0 -1 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link7">
     <inertial>
-      <origin xyz="0.00674741503469933 9.62771529167128E-17 5.55111512312578E-17"
-              rpy="0 0 0" />
+      <origin xyz="0.00674741503469933 9.62771529167128E-17 5.55111512312578E-17" rpy="0 0 0" />
       <mass value="0.0367655989629361" />
-      <inertia ixx="5.86549931456883E-06"
-               ixy="-4.79184341894101E-21"
-               ixz="1.20922560306977E-21"
-               iyy="3.23271382425077E-06"
-               iyz="4.41087406338326E-22"
-               izz="3.23271382425077E-06" />
+      <inertia ixx="5.86549931456883E-06" ixy="-4.79184341894101E-21" ixz="1.20922560306977E-21"
+        iyy="3.23271382425077E-06" iyz="4.41087406338326E-22" izz="3.23271382425077E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link7.STL" />
       </geometry>
@@ -291,33 +218,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm1_j7"
-         type="revolute">
-    <origin xyz="0.0357187500000001 0.000793749999999943 -0.01905"
-            rpy="0 0 0" />
+  <joint name="arm1_j7" type="revolute">
+    <origin xyz="0.0357187500000001 0.000793749999999943 -0.01905" rpy="0 0 0" />
     <parent link="arm1_link6" />
     <child link="arm1_link7" />
     <axis xyz="1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm1_foot_link">
     <inertial>
-      <origin xyz="8.32667268468867E-17 1.82145964977565E-17 0.00744083117708139"
-              rpy="0 0 0" />
+      <origin xyz="8.32667268468867E-17 1.82145964977565E-17 0.00744083117708139" rpy="0 0 0" />
       <mass value="0.14479166215211" />
-      <inertia ixx="1.36289258201717E-05"
-               ixy="3.35141917982706E-21"
-               ixz="1.05031177060681E-20"
-               iyy="1.36289258201717E-05"
-               iyz="2.35700320143414E-21"
-               izz="2.10181024696624E-05" />
+      <inertia ixx="1.36289258201717E-05" ixy="3.35141917982706E-21" ixz="1.05031177060681E-20"
+        iyy="1.36289258201717E-05" iyz="2.35700320143414E-21" izz="2.10181024696624E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm1_link8.STL" />
       </geometry>
@@ -326,35 +242,26 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.023" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm1_j8"
-         type="fixed">
-    <origin xyz="0.01161 0 0"
-            rpy="0 1.5708 0" />
+  <joint name="arm1_j8" type="fixed">
+    <origin xyz="0.01161 0 0" rpy="0 1.5708 0" />
     <parent link="arm1_link7" />
     <child link="arm1_foot_link" />
   </joint>
   <link name="arm2_link1">
     <inertial>
-      <origin xyz="0.0417122714917704 -0.0181017342185698 -0.0209586636823971"
-              rpy="0 0 0" />
+      <origin xyz="0.0417122714917704 -0.0181017342185698 -0.0209586636823971" rpy="0 0 0" />
       <mass value="0.935223157536646" />
-      <inertia ixx="0.001155326059876"
-               ixy="0.000265241615993487"
-               ixz="0.00033414334695559"
-               iyy="0.00129069814561315"
-               iyz="-0.000269054545467401"
-               izz="0.00107448935964865" />
+      <inertia ixx="0.001155326059876" ixy="0.000265241615993487" ixz="0.00033414334695559"
+        iyy="0.00129069814561315" iyz="-0.000269054545467401" izz="0.00107448935964865" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link1.STL" />
       </geometry>
@@ -363,33 +270,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm2_j1"
-         type="revolute">
-    <origin xyz="0.127 0.1778 0"
-            rpy="0 0 0" />
+  <joint name="arm2_j1" type="revolute">
+    <origin xyz="0.127 0.1778 0" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="arm2_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.785"
-           upper="1.57"
-           effort="300"
-           velocity="100" />
+    <limit lower="-0.785" upper="1.57" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link2">
     <inertial>
-      <origin xyz="0.0109719288802939 0.0206328931107901 0.0100112184839925"
-              rpy="0 0 0" />
+      <origin xyz="0.0109719288802939 0.0206328931107901 0.0100112184839925" rpy="0 0 0" />
       <mass value="0.792615281561027" />
-      <inertia ixx="0.000766574618531906"
-               ixy="0.00017791513660175"
-               ixz="-0.000200979427837307"
-               iyy="0.00092218971070779"
-               iyz="0.000157045527656656"
-               izz="0.000788376809197517" />
+      <inertia ixx="0.000766574618531906" ixy="0.00017791513660175" ixz="-0.000200979427837307"
+        iyy="0.00092218971070779" iyz="0.000157045527656656" izz="0.000788376809197517" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link2.STL" />
       </geometry>
@@ -397,34 +293,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.112" radius="0.038" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm2_j2"
-         type="revolute">
-    <origin xyz="0.05794375 -0.000793749999999922 -0.0381000000000001"
-            rpy="0 0 0" />
+  <joint name="arm2_j2" type="revolute">
+    <origin xyz="0.05794375 -0.000793749999999922 -0.0381000000000001" rpy="0 0 0" />
     <parent link="arm2_link1" />
     <child link="arm2_link2" />
     <axis xyz="0 1 0" />
-    <limit lower="-1.57"
-           upper="3.14"
-           effort="300"
-           velocity="100" />
+    <limit lower="-1.57" upper="3.14" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link3">
     <inertial>
-      <origin xyz="0.0549144218630528 -0.00846459066691621 -0.00980732203635201"
-              rpy="0 0 0" />
+      <origin xyz="0.0549144218630528 -0.00846459066691621 -0.00980732203635201" rpy="0 0 0" />
       <mass value="0.914578646343627" />
-      <inertia ixx="0.000652366478401666"
-               ixy="8.91945013993139E-05"
-               ixz="0.000121260357947482"
-               iyy="0.000661368306540173"
-               iyz="-0.000103242749716624"
-               izz="0.000552144031129009" />
+      <inertia ixx="0.000652366478401666" ixy="8.91945013993139E-05" ixz="0.000121260357947482"
+        iyy="0.000661368306540173" iyz="-0.000103242749716624" izz="0.000552144031129009" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link3.STL" />
       </geometry>
@@ -432,34 +323,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0.015 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder length="0.15" radius="0.031" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm2_j3"
-         type="revolute">
-    <origin xyz="0.0547687500000002 -0.000793749999999992 0.03175"
-            rpy="0 0 0" />
+  <joint name="arm2_j3" type="revolute">
+    <origin xyz="0.0547687500000002 -0.000793749999999992 0.03175" rpy="0 0 0" />
     <parent link="arm2_link2" />
     <child link="arm2_link3" />
     <axis xyz="1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link4">
     <inertial>
-      <origin xyz="0.00793319489230654 0.0168019330034654 0.0104021954186"
-              rpy="0 0 0" />
+      <origin xyz="0.00793319489230654 0.0168019330034654 0.0104021954186" rpy="0 0 0" />
       <mass value="0.441334804948817" />
-      <inertia ixx="0.000330987237092191"
-               ixy="5.77148721763467E-05"
-               ixz="-7.97740094389334E-05"
-               iyy="0.00037306172461715"
-               iyz="7.31146265413007E-05"
-               izz="0.000278861245063849" />
+      <inertia ixx="0.000330987237092191" ixy="5.77148721763467E-05" ixz="-7.97740094389334E-05"
+        iyy="0.00037306172461715" iyz="7.31146265413007E-05" izz="0.000278861245063849" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link4.STL" />
       </geometry>
@@ -467,42 +353,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin xyz="0 0 0"
-              rpy="1.57 0 0" />
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.0825"
-                  radius="0.035" />
+        <cylinder length="0.09" radius="0.0325" />
       </geometry>
-    </collision> -->
+    </collision>
   </link>
-  <joint name="arm2_j4"
-         type="revolute">
-    <origin xyz="0.090483750066 -0.000793749999999871 -0.0317500000000001"
-            rpy="0 0 0" />
+  <joint name="arm2_j4" type="revolute">
+    <origin xyz="0.090483750066 -0.000793749999999871 -0.0317500000000001" rpy="0 0 0" />
     <parent link="arm2_link3" />
     <child link="arm2_link4" />
     <axis xyz="0 -1 0" />
-    <limit lower="-3.14"
-           upper="0.174"
-           effort="300"
-           velocity="100" />
+    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link5">
     <inertial>
-      <origin xyz="0.0587190828697851 -0.0049798870409404 -0.00595239165552489"
-              rpy="0 0 0" />
+      <origin xyz="0.0587190828697851 -0.0049798870409404 -0.00595239165552489" rpy="0 0 0" />
       <mass value="0.632159217766391" />
-      <inertia ixx="0.000255550709127593"
-               ixy="2.20834314160476E-05"
-               ixz="3.22005035262906E-05"
-               iyy="0.000357754030193976"
-               iyz="-2.8582651179978E-05"
-               izz="0.000322487907688684" />
+      <inertia ixx="0.000255550709127593" ixy="2.20834314160476E-05" ixz="3.22005035262906E-05"
+        iyy="0.000357754030193976" iyz="-2.8582651179978E-05" izz="0.000322487907688684" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link5.STL" />
       </geometry>
@@ -511,41 +384,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0.035 0 0"
-              rpy="0 1.57 0" />
+      <origin xyz="0.035 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.07"
-                  radius="0.025" />
+        <cylinder length="0.15" radius="0.025" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm2_j5"
-         type="revolute">
-    <origin xyz="0.0420687499999999 -0.000793750000000003 0.03175"
-            rpy="0 0 0" />
+  <joint name="arm2_j5" type="revolute">
+    <origin xyz="0.0420687499999999 -0.000793750000000003 0.03175" rpy="0 0 0" />
     <parent link="arm2_link4" />
     <child link="arm2_link5" />
     <axis xyz="1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link6">
     <inertial>
-      <origin xyz="0.00638458340630432 0.0112857089760013 0.00502203391406467"
-              rpy="0 0 0" />
+      <origin xyz="0.00638458340630432 0.0112857089760013 0.00502203391406467" rpy="0 0 0" />
       <mass value="0.174644981799895" />
-      <inertia ixx="5.86369694191417E-05"
-               ixy="1.21885255410786E-05"
-               ixz="-1.68481377502978E-05"
-               iyy="8.27831773747369E-05"
-               iyz="9.53630777176154E-06"
-               izz="6.25905935819288E-05" />
+      <inertia ixx="5.86369694191417E-05" ixy="1.21885255410786E-05" ixz="-1.68481377502978E-05"
+        iyy="8.27831773747369E-05" iyz="9.53630777176154E-06" izz="6.25905935819288E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link6.STL" />
       </geometry>
@@ -554,41 +414,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -0.007 0"
-              rpy="1.57 0 0" />
+      <origin xyz="0 -0.0035 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.06"
-                  radius="0.025" />
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm2_j6"
-         type="revolute">
-    <origin xyz="0.10239375 -0.000793749999999754 -0.0254000000000001"
-            rpy="0 0.2 0" />
+  <joint name="arm2_j6" type="revolute">
+    <origin xyz="0.10239375 -0.000793749999999754 -0.0254000000000001" rpy="0 0 0" />
     <parent link="arm2_link5" />
     <child link="arm2_link6" />
     <axis xyz="0 1 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link7">
     <inertial>
-      <origin xyz="0.00674741503469933 -9.28077059647592E-17 -5.55111512312578E-17"
-              rpy="0 0 0" />
+      <origin xyz="0.00674741503469933 -9.28077059647592E-17 -5.55111512312578E-17" rpy="0 0 0" />
       <mass value="0.0367655989629361" />
-      <inertia ixx="5.86549931456883E-06"
-               ixy="5.68739870503834E-21"
-               ixz="-3.59251310998811E-21"
-               iyy="3.23271382425077E-06"
-               iyz="8.9477709009687E-22"
-               izz="3.23271382425077E-06" />
+      <inertia ixx="5.86549931456883E-06" ixy="5.68739870503834E-21" ixz="-3.59251310998811E-21"
+        iyy="3.23271382425077E-06" iyz="8.9477709009687E-22" izz="3.23271382425077E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link7.STL" />
       </geometry>
@@ -597,33 +444,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm2_j7"
-         type="revolute">
-    <origin xyz="0.03571875 -0.000793749999999932 0.01905"
-            rpy="0 0 0" />
+  <joint name="arm2_j7" type="revolute">
+    <origin xyz="0.03571875 -0.000793749999999932 0.01905" rpy="0 0 0" />
     <parent link="arm2_link6" />
     <child link="arm2_link7" />
     <axis xyz="1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm2_foot_link">
     <inertial>
-      <origin xyz="-1.94289029309402E-16 -6.76542155630955E-17 0.00744083117708128"
-              rpy="0 0 0" />
+      <origin xyz="-1.94289029309402E-16 -6.76542155630955E-17 0.00744083117708128" rpy="0 0 0" />
       <mass value="0.14479166215211" />
-      <inertia ixx="1.36289258201717E-05"
-               ixy="2.20712079717551E-20"
-               ixz="-2.84960592237333E-20"
-               iyy="1.36289258201717E-05"
-               iyz="-3.5127376966996E-20"
-               izz="2.10181024696625E-05" />
+      <inertia ixx="1.36289258201717E-05" ixy="2.20712079717551E-20" ixz="-2.84960592237333E-20"
+        iyy="1.36289258201717E-05" iyz="-3.5127376966996E-20" izz="2.10181024696625E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm2_link8.STL" />
       </geometry>
@@ -632,35 +468,26 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.023" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm2_j8"
-         type="fixed">
-    <origin xyz="0.01161 0 0"
-            rpy="0 1.5708 0" />
+  <joint name="arm2_j8" type="fixed">
+    <origin xyz="0.01161 0 0" rpy="0 1.5708 0" />
     <parent link="arm2_link7" />
     <child link="arm2_foot_link" />
   </joint>
   <link name="arm3_link1">
     <inertial>
-      <origin xyz="-0.0417122714917704 0.0181017342185699 -0.0209586636823971"
-              rpy="0 0 0" />
+      <origin xyz="-0.0417122714917704 0.0181017342185699 -0.0209586636823971" rpy="0 0 0" />
       <mass value="0.935223157536646" />
-      <inertia ixx="0.001155326059876"
-               ixy="0.000265241615993486"
-               ixz="-0.00033414334695559"
-               iyy="0.00129069814561315"
-               iyz="0.000269054545467402"
-               izz="0.00107448935964865" />
+      <inertia ixx="0.001155326059876" ixy="0.000265241615993486" ixz="-0.00033414334695559"
+        iyy="0.00129069814561315" iyz="0.000269054545467402" izz="0.00107448935964865" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link1.STL" />
       </geometry>
@@ -669,33 +496,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm3_j1"
-         type="revolute">
-    <origin xyz="-0.127 0.1778 0"
-            rpy="0 0 0" />
+  <joint name="arm3_j1" type="revolute">
+    <origin xyz="-0.127 0.1778 0" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="arm3_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-1.57"
-           upper="0.785"
-           effort="300"
-           velocity="100" />
+    <limit lower="-1.57" upper="0.785" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link2">
     <inertial>
-      <origin xyz="-0.0109719288802939 -0.0206328931107901 0.0100112184839925"
-              rpy="0 0 0" />
+      <origin xyz="-0.0109719288802939 -0.0206328931107901 0.0100112184839925" rpy="0 0 0" />
       <mass value="0.792615281561028" />
-      <inertia ixx="0.000766574618531906"
-               ixy="0.00017791513660175"
-               ixz="0.000200979427837307"
-               iyy="0.000922189710707791"
-               iyz="-0.000157045527656656"
-               izz="0.000788376809197516" />
+      <inertia ixx="0.000766574618531906" ixy="0.00017791513660175" ixz="0.000200979427837307"
+        iyy="0.000922189710707791" iyz="-0.000157045527656656" izz="0.000788376809197516" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link2.STL" />
       </geometry>
@@ -703,34 +519,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.112" radius="0.038" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm3_j2"
-         type="revolute">
-    <origin xyz="-0.05794375 0.000793750000000014 -0.0381000000000001"
-            rpy="0 0 0" />
+  <joint name="arm3_j2" type="revolute">
+    <origin xyz="-0.05794375 0.000793750000000014 -0.0381000000000001" rpy="0 0 0" />
     <parent link="arm3_link1" />
     <child link="arm3_link2" />
     <axis xyz="0 -1 0" />
-    <limit lower="-1.57"
-           upper="3.14"
-           effort="300"
-           velocity="100" />
+    <limit lower="-1.57" upper="3.14" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link3">
     <inertial>
-      <origin xyz="-0.0549144218630529 0.00846459066691622 -0.00980732203635196"
-              rpy="0 0 0" />
+      <origin xyz="-0.0549144218630529 0.00846459066691622 -0.00980732203635196" rpy="0 0 0" />
       <mass value="0.914578646343626" />
-      <inertia ixx="0.000652366478401666"
-               ixy="8.91945013993138E-05"
-               ixz="-0.000121260357947482"
-               iyy="0.000661368306540173"
-               iyz="0.000103242749716623"
-               izz="0.000552144031129009" />
+      <inertia ixx="0.000652366478401666" ixy="8.91945013993138E-05" ixz="-0.000121260357947482"
+        iyy="0.000661368306540173" iyz="0.000103242749716623" izz="0.000552144031129009" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link3.STL" />
       </geometry>
@@ -738,34 +549,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="-0.015 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder length="0.15" radius="0.031" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm3_j3"
-         type="revolute">
-    <origin xyz="-0.0547687500000001 0.000793750000000006 0.03175"
-            rpy="0 0 0" />
+  <joint name="arm3_j3" type="revolute">
+    <origin xyz="-0.0547687500000001 0.000793750000000006 0.03175" rpy="0 0 0" />
     <parent link="arm3_link2" />
     <child link="arm3_link3" />
     <axis xyz="-1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link4">
     <inertial>
-      <origin xyz="-0.00793319489230665 -0.0168019330034654 0.0104021954185999"
-              rpy="0 0 0" />
+      <origin xyz="-0.00793319489230665 -0.0168019330034654 0.0104021954185999" rpy="0 0 0" />
       <mass value="0.441334804948817" />
-      <inertia ixx="0.000330987237092191"
-               ixy="5.77148721763466E-05"
-               ixz="7.97740094389332E-05"
-               iyy="0.00037306172461715"
-               iyz="-7.31146265413007E-05"
-               izz="0.000278861245063848" />
+      <inertia ixx="0.000330987237092191" ixy="5.77148721763466E-05" ixz="7.97740094389332E-05"
+        iyy="0.00037306172461715" iyz="-7.31146265413007E-05" izz="0.000278861245063848" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link4.STL" />
       </geometry>
@@ -773,42 +579,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin xyz="0 0 0"
-              rpy="1.57 0 0" />
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.0825"
-                  radius="0.035" />
+        <cylinder length="0.09" radius="0.0325" />
       </geometry>
-    </collision> -->
+    </collision>
   </link>
-  <joint name="arm3_j4"
-         type="revolute">
-    <origin xyz="-0.090483750066 0.000793749999999906 -0.03175"
-            rpy="0 0 0" />
+  <joint name="arm3_j4" type="revolute">
+    <origin xyz="-0.090483750066 0.000793749999999906 -0.03175" rpy="0 0 0" />
     <parent link="arm3_link3" />
     <child link="arm3_link4" />
     <axis xyz="0 1 0" />
-    <limit lower="-3.14"
-           upper="0.174"
-           effort="300"
-           velocity="100" />
+    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link5">
     <inertial>
-      <origin xyz="-0.0587190828697851 0.00497988704094041 -0.00595239165552475"
-              rpy="0 0 0" />
+      <origin xyz="-0.0587190828697851 0.00497988704094041 -0.00595239165552475" rpy="0 0 0" />
       <mass value="0.632159217766391" />
-      <inertia ixx="0.000255550709127593"
-               ixy="2.20834314160477E-05"
-               ixz="-3.22005035262904E-05"
-               iyy="0.000357754030193976"
-               iyz="2.8582651179978E-05"
-               izz="0.000322487907688685" />
+      <inertia ixx="0.000255550709127593" ixy="2.20834314160477E-05" ixz="-3.22005035262904E-05"
+        iyy="0.000357754030193976" iyz="2.8582651179978E-05" izz="0.000322487907688685" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link5.STL" />
       </geometry>
@@ -817,41 +610,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.035 0 0"
-              rpy="0 1.57 0" />
+      <origin xyz="-0.035 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.07"
-                  radius="0.025" />
+        <cylinder length="0.15" radius="0.025" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm3_j5"
-         type="revolute">
-    <origin xyz="-0.04206875 0.000793750000000013 0.03175"
-            rpy="0 0 0" />
+  <joint name="arm3_j5" type="revolute">
+    <origin xyz="-0.04206875 0.000793750000000013 0.03175" rpy="0 0 0" />
     <parent link="arm3_link4" />
     <child link="arm3_link5" />
     <axis xyz="-1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link6">
     <inertial>
-      <origin xyz="-0.00638458341607057 -0.0112857089393425 0.00502203392889516"
-              rpy="0 0 0" />
+      <origin xyz="-0.00638458341607057 -0.0112857089393425 0.00502203392889516" rpy="0 0 0" />
       <mass value="0.174644981988622" />
-      <inertia ixx="5.86369696509805E-05"
-               ixy="1.21885255932662E-05"
-               ixz="1.68481377921105E-05"
-               iyy="8.2783177399353E-05"
-               iyz="-9.53630787959262E-06"
-               izz="6.25905937971474E-05" />
+      <inertia ixx="5.86369696509805E-05" ixy="1.21885255932662E-05" ixz="1.68481377921105E-05"
+        iyy="8.2783177399353E-05" iyz="-9.53630787959262E-06" izz="6.25905937971474E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link6.STL" />
       </geometry>
@@ -860,41 +640,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0.007 0"
-              rpy="1.57 0 0" />
+      <origin xyz="0 0.0035 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.06"
-                  radius="0.025" />
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm3_j6"
-         type="revolute">
-    <origin xyz="-0.10239375 0.000793749999999791 -0.0254"
-            rpy="0 0.2 0" />
+  <joint name="arm3_j6" type="revolute">
+    <origin xyz="-0.10239375 0.000793749999999791 -0.0254" rpy="0 0 0" />
     <parent link="arm3_link5" />
     <child link="arm3_link6" />
     <axis xyz="0 -1 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link7">
     <inertial>
-      <origin xyz="-0.00674741503469944 9.54097911787244E-17 -2.77555756156289E-17"
-              rpy="0 0 0" />
+      <origin xyz="-0.00674741503469944 9.54097911787244E-17 -2.77555756156289E-17" rpy="0 0 0" />
       <mass value="0.0367655989629361" />
-      <inertia ixx="5.86549931456883E-06"
-               ixy="4.78984236682278E-21"
-               ixz="1.20806709523832E-21"
-               iyy="3.23271382425077E-06"
-               iyz="-3.38306784486667E-22"
-               izz="3.23271382425077E-06" />
+      <inertia ixx="5.86549931456883E-06" ixy="4.78984236682278E-21" ixz="1.20806709523832E-21"
+        iyy="3.23271382425077E-06" iyz="-3.38306784486667E-22" izz="3.23271382425077E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link7.STL" />
       </geometry>
@@ -903,33 +670,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm3_j7"
-         type="revolute">
-    <origin xyz="-0.03571875 0.000793749999999942 0.01905"
-            rpy="0 0 0" />
+  <joint name="arm3_j7" type="revolute">
+    <origin xyz="-0.03571875 0.000793749999999942 0.01905" rpy="0 0 0" />
     <parent link="arm3_link6" />
     <child link="arm3_link7" />
     <axis xyz="-1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm3_foot_link">
     <inertial>
-      <origin xyz="2.22044604925031E-16 3.20923843055709E-17 -0.0074408311770815"
-              rpy="0 0 0" />
+      <origin xyz="2.22044604925031E-16 3.20923843055709E-17 -0.0074408311770815" rpy="0 0 0" />
       <mass value="0.14479166215211" />
-      <inertia ixx="1.36289258201718E-05"
-               ixy="3.74884779602183E-20"
-               ixz="-1.14045050022515E-20"
-               iyy="1.36289258201718E-05"
-               iyz="7.03827931133254E-20"
-               izz="2.10181024696625E-05" />
+      <inertia ixx="1.36289258201718E-05" ixy="3.74884779602183E-20" ixz="-1.14045050022515E-20"
+        iyy="1.36289258201718E-05" iyz="7.03827931133254E-20" izz="2.10181024696625E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm3_link8.STL" />
       </geometry>
@@ -938,35 +694,26 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.023" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm3_j8"
-         type="fixed">
-    <origin xyz="-0.01161 0 0"
-            rpy="0 1.5708 0" />
+  <joint name="arm3_j8" type="fixed">
+    <origin xyz="-0.01161 0 0" rpy="0 1.5708 0" />
     <parent link="arm3_link7" />
     <child link="arm3_foot_link" />
   </joint>
   <link name="arm4_link1">
     <inertial>
-      <origin xyz="-0.0417122714917704 -0.0181017342185699 0.020958663682397"
-              rpy="0 0 0" />
+      <origin xyz="-0.0417122714917704 -0.0181017342185699 0.020958663682397" rpy="0 0 0" />
       <mass value="0.935223157536645" />
-      <inertia ixx="0.00115532605987601"
-               ixy="-0.00026524161599349"
-               ixz="0.000334143346955592"
-               iyy="0.00129069814561315"
-               iyz="0.000269054545467402"
-               izz="0.00107448935964865" />
+      <inertia ixx="0.00115532605987601" ixy="-0.00026524161599349" ixz="0.000334143346955592"
+        iyy="0.00129069814561315" iyz="0.000269054545467402" izz="0.00107448935964865" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link1.STL" />
       </geometry>
@@ -975,33 +722,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm4_j1"
-         type="revolute">
-    <origin xyz="-0.127 -0.1778 0"
-            rpy="3.14 0 0" />
+  <joint name="arm4_j1" type="revolute">
+    <origin xyz="-0.127 -0.1778 0" rpy="3.14 0 0" />
     <parent link="base_link" />
     <child link="arm4_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-1.57"
-           upper="0.785"
-           effort="300"
-           velocity="100" />
+    <limit lower="-1.57" upper="0.785" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link2">
     <inertial>
-      <origin xyz="-0.0109719288802939 0.0206328931107901 -0.0100112184839926"
-              rpy="0 0 0" />
+      <origin xyz="-0.0109719288802939 0.0206328931107901 -0.0100112184839926" rpy="0 0 0" />
       <mass value="0.792615281561028" />
-      <inertia ixx="0.000766574618531907"
-               ixy="-0.00017791513660175"
-               ixz="-0.000200979427837307"
-               iyy="0.000922189710707791"
-               iyz="-0.000157045527656657"
-               izz="0.000788376809197517" />
+      <inertia ixx="0.000766574618531907" ixy="-0.00017791513660175" ixz="-0.000200979427837307"
+        iyy="0.000922189710707791" iyz="-0.000157045527656657" izz="0.000788376809197517" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link2.STL" />
       </geometry>
@@ -1009,34 +745,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.112" radius="0.038" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm4_j2"
-         type="revolute">
-    <origin xyz="-0.0579437500000001 -0.000793749999999984 0.0381"
-            rpy="0 0 0" />
+  <joint name="arm4_j2" type="revolute">
+    <origin xyz="-0.0579437500000001 -0.000793749999999984 0.0381" rpy="0 0 0" />
     <parent link="arm4_link1" />
     <child link="arm4_link2" />
     <axis xyz="0 1 0" />
-    <limit lower="-1.57"
-           upper="3.14"
-           effort="300"
-           velocity="100" />
+    <limit lower="-1.57" upper="3.14" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link3">
     <inertial>
-      <origin xyz="-0.0549144218630528 -0.00846459066691622 0.00980732203635193"
-              rpy="0 0 0" />
+      <origin xyz="-0.0549144218630528 -0.00846459066691622 0.00980732203635193" rpy="0 0 0" />
       <mass value="0.914578646343626" />
-      <inertia ixx="0.000652366478401665"
-               ixy="-8.91945013993137E-05"
-               ixz="0.000121260357947482"
-               iyy="0.000661368306540173"
-               iyz="0.000103242749716623"
-               izz="0.000552144031129009" />
+      <inertia ixx="0.000652366478401665" ixy="-8.91945013993137E-05" ixz="0.000121260357947482"
+        iyy="0.000661368306540173" iyz="0.000103242749716623" izz="0.000552144031129009" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link3.STL" />
       </geometry>
@@ -1044,34 +775,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
+    <collision>
+      <origin xyz="-0.015 0 0" rpy="0 1.57 0" />
+      <geometry>
+        <cylinder length="0.15" radius="0.031" />
+      </geometry>
+    </collision>
   </link>
-  <joint name="arm4_j3"
-         type="revolute">
-    <origin xyz="-0.0547687500000001 -0.000793750000000011 -0.03175"
-            rpy="0 0 0" />
+  <joint name="arm4_j3" type="revolute">
+    <origin xyz="-0.0547687500000001 -0.000793750000000011 -0.03175" rpy="0 0 0" />
     <parent link="arm4_link2" />
     <child link="arm4_link3" />
     <axis xyz="-1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link4">
     <inertial>
-      <origin xyz="-0.00793319489230671 0.0168019330034654 -0.0104021954185999"
-              rpy="0 0 0" />
+      <origin xyz="-0.00793319489230671 0.0168019330034654 -0.0104021954185999" rpy="0 0 0" />
       <mass value="0.441334804948817" />
-      <inertia ixx="0.000330987237092191"
-               ixy="-5.77148721763466E-05"
-               ixz="-7.97740094389332E-05"
-               iyy="0.00037306172461715"
-               iyz="-7.31146265413007E-05"
-               izz="0.000278861245063848" />
+      <inertia ixx="0.000330987237092191" ixy="-5.77148721763466E-05" ixz="-7.97740094389332E-05"
+        iyy="0.00037306172461715" iyz="-7.31146265413007E-05" izz="0.000278861245063848" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link4.STL" />
       </geometry>
@@ -1079,42 +805,29 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <!-- <collision>
-      <origin xyz="0 0 0"
-              rpy="1.57 0 0" />
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.0825"
-                  radius="0.035" />
+        <cylinder length="0.09" radius="0.0325" />
       </geometry>
-    </collision> -->
+    </collision>
   </link>
-  <joint name="arm4_j4"
-         type="revolute">
-    <origin xyz="-0.090483750066 -0.000793749999999901 0.03175"
-            rpy="0 0 0" />
+  <joint name="arm4_j4" type="revolute">
+    <origin xyz="-0.090483750066 -0.000793749999999901 0.03175" rpy="0 0 0" />
     <parent link="arm4_link3" />
     <child link="arm4_link4" />
     <axis xyz="0 -1 0" />
-    <limit lower="-3.14"
-           upper="0.174"
-           effort="300"
-           velocity="100" />
+    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link5">
     <inertial>
-      <origin xyz="-0.0587190828697849 -0.00497988704094036 0.00595239165552469"
-              rpy="0 0 0" />
+      <origin xyz="-0.0587190828697849 -0.00497988704094036 0.00595239165552469" rpy="0 0 0" />
       <mass value="0.632159217766391" />
-      <inertia ixx="0.000255550709127593"
-               ixy="-2.20834314160474E-05"
-               ixz="3.22005035262904E-05"
-               iyy="0.000357754030193975"
-               iyz="2.8582651179978E-05"
-               izz="0.000322487907688684" />
+      <inertia ixx="0.000255550709127593" ixy="-2.20834314160474E-05" ixz="3.22005035262904E-05"
+        iyy="0.000357754030193975" iyz="2.8582651179978E-05" izz="0.000322487907688684" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link5.STL" />
       </geometry>
@@ -1123,41 +836,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.035 0 0"
-              rpy="0 1.57 0" />
+      <origin xyz="-0.035 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.07"
-                  radius="0.025" />
+        <cylinder length="0.15" radius="0.025" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm4_j5"
-         type="revolute">
-    <origin xyz="-0.0420687499999999 -0.000793750000000018 -0.03175"
-            rpy="0 0 0" />
+  <joint name="arm4_j5" type="revolute">
+    <origin xyz="-0.0420687499999999 -0.000793750000000018 -0.03175" rpy="0 0 0" />
     <parent link="arm4_link4" />
     <child link="arm4_link5" />
     <axis xyz="-1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link6">
     <inertial>
-      <origin xyz="-0.00638458341607051 0.0112857089393424 -0.00502203392889522"
-              rpy="0 0 0" />
+      <origin xyz="-0.00638458341607051 0.0112857089393424 -0.00502203392889522" rpy="0 0 0" />
       <mass value="0.174644981988622" />
-      <inertia ixx="5.86369696509808E-05"
-               ixy="-1.21885255932663E-05"
-               ixz="-1.68481377921105E-05"
-               iyy="8.27831773993532E-05"
-               iyz="-9.53630787959266E-06"
-               izz="6.25905937971476E-05" />
+      <inertia ixx="5.86369696509808E-05" ixy="-1.21885255932663E-05" ixz="-1.68481377921105E-05"
+        iyy="8.27831773993532E-05" iyz="-9.53630787959266E-06" izz="6.25905937971476E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link6.STL" />
       </geometry>
@@ -1166,41 +866,28 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -0.007 0"
-              rpy="1.57 0 0" />
+      <origin xyz="0 -0.0035 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.06"
-                  radius="0.025" />
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm4_j6"
-         type="revolute">
-    <origin xyz="-0.10239375 -0.000793749999999786 0.0254"
-            rpy="0 0.2 0" />
+  <joint name="arm4_j6" type="revolute">
+    <origin xyz="-0.10239375 -0.000793749999999786 0.0254" rpy="0 0 0" />
     <parent link="arm4_link5" />
     <child link="arm4_link6" />
     <axis xyz="0 1 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link7">
     <inertial>
-      <origin xyz="-0.00674741503469933 -9.54097911787244E-17 5.55111512312578E-17"
-              rpy="0 0 0" />
+      <origin xyz="-0.00674741503469933 -9.54097911787244E-17 5.55111512312578E-17" rpy="0 0 0" />
       <mass value="0.0367655989629361" />
-      <inertia ixx="5.86549931456882E-06"
-               ixy="-4.74148012681146E-21"
-               ixz="-1.21230524092121E-21"
-               iyy="3.23271382425077E-06"
-               iyz="-2.4715591797414E-22"
-               izz="3.23271382425077E-06" />
+      <inertia ixx="5.86549931456882E-06" ixy="-4.74148012681146E-21" ixz="-1.21230524092121E-21"
+        iyy="3.23271382425077E-06" iyz="-2.4715591797414E-22" izz="3.23271382425077E-06" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link7.STL" />
       </geometry>
@@ -1209,33 +896,22 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm4_j7"
-         type="revolute">
-    <origin xyz="-0.03571875 -0.000793749999999946 -0.01905"
-            rpy="0 0 0" />
+  <joint name="arm4_j7" type="revolute">
+    <origin xyz="-0.03571875 -0.000793749999999946 -0.01905" rpy="0 0 0" />
     <parent link="arm4_link6" />
     <child link="arm4_link7" />
     <axis xyz="-1 0 0" />
-    <limit lower="0"
-           upper="0"
-           effort="300"
-           velocity="100" />
+    <limit lower="0" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm4_foot_link">
     <inertial>
-      <origin xyz="1.11022302462516E-16 -3.20923843055709E-17 -0.00744083117708139"
-              rpy="0 0 0" />
+      <origin xyz="1.11022302462516E-16 -3.20923843055709E-17 -0.00744083117708139" rpy="0 0 0" />
       <mass value="0.14479166215211" />
-      <inertia ixx="1.36289258201717E-05"
-               ixy="-3.74971202894764E-21"
-               ixz="8.59221590586773E-21"
-               iyy="1.36289258201717E-05"
-               iyz="-6.36929586129171E-21"
-               izz="2.10181024696624E-05" />
+      <inertia ixx="1.36289258201717E-05" ixy="-3.74971202894764E-21" ixz="8.59221590586773E-21"
+        iyy="1.36289258201717E-05" iyz="-6.36929586129171E-21" izz="2.10181024696624E-05" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <mesh filename="meshes/arm4_link8.STL" />
       </geometry>
@@ -1244,17 +920,14 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0"
-              rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <sphere radius="0.023" />
       </geometry>
     </collision>
   </link>
-  <joint name="arm4_j8"
-         type="fixed">
-    <origin xyz="-0.01161 0 0"
-            rpy="0 1.5708 0" />
+  <joint name="arm4_j8" type="fixed">
+    <origin xyz="-0.01161 0 0" rpy="0 1.5708 0" />
     <parent link="arm4_link7" />
     <child link="arm4_foot_link" />
   </joint>
