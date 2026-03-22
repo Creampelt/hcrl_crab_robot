@@ -49,7 +49,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm1_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.785" upper="1.57" effort="300" velocity="100" />
+    <limit lower="-0.34" upper="0.785" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link2">
     <inertial>
@@ -70,7 +70,7 @@ Stephen Brawner (brawner@gmail.com)
     <collision>
       <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.112" radius="0.038" />
+        <cylinder length="0.03" radius="0.038" />
       </geometry>
     </collision>
   </link>
@@ -98,9 +98,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0.015 0 0" rpy="0 1.57 0" />
+      <origin xyz="0.045 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.031" />
+        <cylinder length="0.09" radius="0.031" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.090483750066 0.000793749999999904 0.03175" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.062" radius="0.0325" />
       </geometry>
     </collision>
   </link>
@@ -127,19 +133,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.09" radius="0.0325" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm1_j4" type="revolute">
     <origin xyz="0.090483750066 0.000793749999999904 0.03175" rpy="0 0 0" />
     <parent link="arm1_link3" />
     <child link="arm1_link4" />
     <axis xyz="0 1 0" />
-    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
+    <limit lower="-3.14" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link5">
     <inertial>
@@ -158,9 +158,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0.035 0 0" rpy="0 1.57 0" />
+      <origin xyz="0.055 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.025" />
+        <cylinder length="0.11" radius="0.025" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.10239375 0.004293749999999789 0.0254" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
@@ -187,19 +193,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0.0035 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.067" radius="0.026" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm1_j6" type="revolute">
     <origin xyz="0.10239375 0.000793749999999789 0.0254" rpy="0 0 0" />
     <parent link="arm1_link5" />
     <child link="arm1_link6" />
     <axis xyz="0 -1 0" />
-    <limit lower="-0.174" upper="3.14" effort="300" velocity="100" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link7">
     <inertial>
@@ -275,7 +275,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm2_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.785" upper="1.57" effort="300" velocity="100" />
+    <limit lower="-0.3" upper="0.785" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link2">
     <inertial>
@@ -296,7 +296,7 @@ Stephen Brawner (brawner@gmail.com)
     <collision>
       <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.112" radius="0.038" />
+        <cylinder length="0.03" radius="0.038" />
       </geometry>
     </collision>
   </link>
@@ -324,9 +324,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0.015 0 0" rpy="0 1.57 0" />
+      <origin xyz="0.045 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.031" />
+        <cylinder length="0.09" radius="0.031" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.090483750066 -0.000793749999999871 -0.0317500000000001" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.062" radius="0.0325" />
       </geometry>
     </collision>
   </link>
@@ -353,19 +359,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.09" radius="0.0325" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm2_j4" type="revolute">
     <origin xyz="0.090483750066 -0.000793749999999871 -0.0317500000000001" rpy="0 0 0" />
     <parent link="arm2_link3" />
     <child link="arm2_link4" />
     <axis xyz="0 -1 0" />
-    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
+    <limit lower="-3.14" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link5">
     <inertial>
@@ -384,9 +384,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0.035 0 0" rpy="0 1.57 0" />
+      <origin xyz="0.055 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.025" />
+        <cylinder length="0.11" radius="0.025" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.10239375 -0.004293749999999789 -0.0254" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
@@ -413,19 +419,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 -0.0035 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.067" radius="0.026" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm2_j6" type="revolute">
     <origin xyz="0.10239375 -0.000793749999999754 -0.0254000000000001" rpy="0 0 0" />
     <parent link="arm2_link5" />
     <child link="arm2_link6" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.174" upper="3.14" effort="300" velocity="100" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link7">
     <inertial>
@@ -501,7 +501,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm3_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-1.57" upper="0.785" effort="300" velocity="100" />
+    <limit lower="-0.785" upper="0.34" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link2">
     <inertial>
@@ -522,7 +522,7 @@ Stephen Brawner (brawner@gmail.com)
     <collision>
       <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.112" radius="0.038" />
+        <cylinder length="0.03" radius="0.038" />
       </geometry>
     </collision>
   </link>
@@ -550,9 +550,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.015 0 0" rpy="0 1.57 0" />
+      <origin xyz="-0.045 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.031" />
+        <cylinder length="0.09" radius="0.031" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.090483750066 0.000793749999999906 -0.03175" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.062" radius="0.0325" />
       </geometry>
     </collision>
   </link>
@@ -579,19 +585,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.09" radius="0.0325" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm3_j4" type="revolute">
     <origin xyz="-0.090483750066 0.000793749999999906 -0.03175" rpy="0 0 0" />
     <parent link="arm3_link3" />
     <child link="arm3_link4" />
     <axis xyz="0 1 0" />
-    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
+    <limit lower="-3.14" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link5">
     <inertial>
@@ -610,9 +610,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.035 0 0" rpy="0 1.57 0" />
+      <origin xyz="-0.055 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.025" />
+        <cylinder length="0.11" radius="0.025" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.10239375 0.004293749999999789 -0.0254" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
@@ -639,19 +645,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0.0035 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.067" radius="0.026" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm3_j6" type="revolute">
     <origin xyz="-0.10239375 0.000793749999999791 -0.0254" rpy="0 0 0" />
     <parent link="arm3_link5" />
     <child link="arm3_link6" />
     <axis xyz="0 -1 0" />
-    <limit lower="-0.174" upper="3.14" effort="300" velocity="100" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link7">
     <inertial>
@@ -727,7 +727,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm4_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-1.57" upper="0.785" effort="300" velocity="100" />
+    <limit lower="-0.785" upper="0.3" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link2">
     <inertial>
@@ -748,7 +748,7 @@ Stephen Brawner (brawner@gmail.com)
     <collision>
       <origin xyz="0 0 0" rpy="1.57 0 0" />
       <geometry>
-        <cylinder length="0.112" radius="0.038" />
+        <cylinder length="0.03" radius="0.038" />
       </geometry>
     </collision>
   </link>
@@ -776,9 +776,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.015 0 0" rpy="0 1.57 0" />
+      <origin xyz="-0.045 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.031" />
+        <cylinder length="0.09" radius="0.031" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.090483750066 -0.000793749999999901 0.03175" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.062" radius="0.0325" />
       </geometry>
     </collision>
   </link>
@@ -805,19 +811,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.09" radius="0.0325" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm4_j4" type="revolute">
     <origin xyz="-0.090483750066 -0.000793749999999901 0.03175" rpy="0 0 0" />
     <parent link="arm4_link3" />
     <child link="arm4_link4" />
     <axis xyz="0 -1 0" />
-    <limit lower="-3.14" upper="0.174" effort="300" velocity="100" />
+    <limit lower="-3.14" upper="0" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link5">
     <inertial>
@@ -836,9 +836,15 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.035 0 0" rpy="0 1.57 0" />
+      <origin xyz="-0.055 0 0" rpy="0 1.57 0" />
       <geometry>
-        <cylinder length="0.15" radius="0.025" />
+        <cylinder length="0.11" radius="0.025" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.10239375 -0.004293749999999789 0.0254" rpy="1.57 0 0" />
+      <geometry>
+        <cylinder length="0.067" radius="0.026" />
       </geometry>
     </collision>
   </link>
@@ -865,19 +871,13 @@ Stephen Brawner (brawner@gmail.com)
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
-    <collision>
-      <origin xyz="0 -0.0035 0" rpy="1.57 0 0" />
-      <geometry>
-        <cylinder length="0.067" radius="0.026" />
-      </geometry>
-    </collision>
   </link>
   <joint name="arm4_j6" type="revolute">
     <origin xyz="-0.10239375 -0.000793749999999786 0.0254" rpy="0 0 0" />
     <parent link="arm4_link5" />
     <child link="arm4_link6" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.174" upper="3.14" effort="300" velocity="100" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link7">
     <inertial>
