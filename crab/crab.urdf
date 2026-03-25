@@ -21,9 +21,10 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <origin xyz="0 0 0.05" rpy="0 0 0.785" />
       <geometry>
-        <mesh filename="meshes/base_link_collision.STL" />
+        <box size="0.4 0.4 0.2" />
+        <!-- <mesh filename="meshes/base_link_collision.STL" /> -->
       </geometry>
     </collision>
   </link>
@@ -49,7 +50,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm1_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.34" upper="0.785" effort="300" velocity="100" />
+    <limit lower="-0.34" upper="1.57" effort="300" velocity="100" />
   </joint>
   <link name="arm1_link2">
     <inertial>
@@ -275,7 +276,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm2_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.3" upper="0.785" effort="300" velocity="100" />
+    <limit lower="-0.34" upper="1.57" effort="300" velocity="100" />
   </joint>
   <link name="arm2_link2">
     <inertial>
@@ -501,7 +502,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm3_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.785" upper="0.34" effort="300" velocity="100" />
+    <limit lower="-1.57" upper="0.34" effort="300" velocity="100" />
   </joint>
   <link name="arm3_link2">
     <inertial>
@@ -727,7 +728,7 @@ Stephen Brawner (brawner@gmail.com)
     <parent link="base_link" />
     <child link="arm4_link1" />
     <axis xyz="0 0 1" />
-    <limit lower="-0.785" upper="0.3" effort="300" velocity="100" />
+    <limit lower="-1.57" upper="0.34" effort="300" velocity="100" />
   </joint>
   <link name="arm4_link2">
     <inertial>
