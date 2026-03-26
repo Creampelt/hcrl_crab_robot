@@ -195,12 +195,12 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm1_j6" type="revolute">
+  <joint name="arm1_j6" type="fixed">
     <origin xyz="0.10239375 0.000793749999999789 0.0254" rpy="0 0 0" />
     <parent link="arm1_link5" />
     <child link="arm1_link6" />
-    <axis xyz="0 -1 0" />
-    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
+    <!-- <axis xyz="0 -1 0" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" /> -->
   </joint>
   <link name="arm1_link7">
     <inertial>
@@ -421,12 +421,12 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm2_j6" type="revolute">
+  <joint name="arm2_j6" type="fixed">
     <origin xyz="0.10239375 -0.000793749999999754 -0.0254000000000001" rpy="0 0 0" />
     <parent link="arm2_link5" />
     <child link="arm2_link6" />
-    <axis xyz="0 1 0" />
-    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
+    <!-- <axis xyz="0 1 0" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" /> -->
   </joint>
   <link name="arm2_link7">
     <inertial>
@@ -647,12 +647,12 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm3_j6" type="revolute">
+  <joint name="arm3_j6" type="fixed">
     <origin xyz="-0.10239375 0.000793749999999791 -0.0254" rpy="0 0 0" />
     <parent link="arm3_link5" />
     <child link="arm3_link6" />
-    <axis xyz="0 -1 0" />
-    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
+    <!-- <axis xyz="0 -1 0" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" /> -->
   </joint>
   <link name="arm3_link7">
     <inertial>
@@ -873,12 +873,12 @@ Stephen Brawner (brawner@gmail.com)
       </material>
     </visual>
   </link>
-  <joint name="arm4_j6" type="revolute">
+  <joint name="arm4_j6" type="fixed">
     <origin xyz="-0.10239375 -0.000793749999999786 0.0254" rpy="0 0 0" />
     <parent link="arm4_link5" />
     <child link="arm4_link6" />
-    <axis xyz="0 1 0" />
-    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" />
+    <!-- <axis xyz="0 1 0" />
+    <limit lower="-0.174" upper="3.05" effort="300" velocity="100" /> -->
   </joint>
   <link name="arm4_link7">
     <inertial>
