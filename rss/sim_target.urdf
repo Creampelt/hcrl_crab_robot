@@ -35,14 +35,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/FT_Plate.stl"/>
+        <mesh filename="rss_meshes/FT_Plate.stl"/>
       </geometry>
       <material name="gold"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/FT_Plate_collision.stl"/>
+        <mesh filename="rss_meshes/FT_Plate_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -163,7 +163,7 @@
     <visual>
       <origin rpy="0 0 0.523599" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/simple_satellite.stl"/>
+        <mesh filename="rss_meshes/simple_satellite.stl"/>
       </geometry>
       <material name="gold_transparent">
         <color rgba="0.839 0.592 0.149 0.4"/>
@@ -172,7 +172,7 @@
     <collision>
       <origin rpy="0 0 0.523599" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/simple_satellite.stl"/>
+        <mesh filename="rss_meshes/simple_satellite.stl"/>
       </geometry>
     </collision>
     <!-- JUNETTE: You can change these inertias as needed, this is the simulated target vehicle intertia -->
@@ -228,7 +228,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Grip_Collision.stl"/>
+        <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
       <material name="black_transparent">
         <color rgba="0 0 0 0.5"/>
@@ -250,7 +250,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Grip_Collision.stl"/>
+        <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
       <material name="black_transparent">
         <color rgba="0 0 0 0.5"/>
@@ -272,7 +272,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Grip_Collision.stl"/>
+        <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
       <material name="black_transparent">
         <color rgba="0 0 0 0.5"/>
@@ -294,7 +294,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Grip_Collision.stl"/>
+        <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
       <material name="black_transparent">
         <color rgba="0 0 0 0.5"/>
@@ -316,7 +316,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Grip_Collision.stl"/>
+        <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
       <material name="black_transparent">
         <color rgba="0 0 0 0.5"/>
@@ -378,13 +378,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/rotary_coordinate_frame.stl"/>
+        <mesh filename="rss_meshes/rotary_coordinate_frame.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/rotary_coordinate_frame.stl"/>
+        <mesh filename="rss_meshes/rotary_coordinate_frame.stl"/>
       </geometry>
     </collision>
   </link>

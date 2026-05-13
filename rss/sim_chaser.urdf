@@ -90,13 +90,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/slide_coordinate_frame.stl"/>
+        <mesh filename="rss_meshes/slide_coordinate_frame.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/slide_coordinate_frame.stl"/>
+        <mesh filename="rss_meshes/slide_coordinate_frame.stl"/>
       </geometry>
     </collision>
   </link>
@@ -183,7 +183,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/mounting.STL"/>
+        <mesh filename="rss_meshes/mounting.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.50196 0.50196 0.50196 1"/>
@@ -231,7 +231,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/mounting.STL"/>
+        <mesh filename="rss_meshes/mounting.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.50196 0.50196 0.50196 1"/>
@@ -279,7 +279,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/mounting.STL"/>
+        <mesh filename="rss_meshes/mounting.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.50196 0.50196 0.50196 1"/>
@@ -411,7 +411,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/tombstone.stl"/>
+        <mesh filename="rss_meshes/tombstone.stl"/>
       </geometry>
       <material name="Black(ish)">
         <color rgba="0.1216 0.1216 0.1216 1.0"/>
@@ -420,7 +420,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/tombstone.stl"/>
+        <mesh filename="rss_meshes/tombstone.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -453,13 +453,13 @@
     <visual>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/base.dae"/>
+        <mesh filename="ur20_meshes/visual/base.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/base.stl"/>
+        <mesh filename="ur20_meshes/collision/base.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -472,13 +472,13 @@
     <visual>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/shoulder.dae"/>
+        <mesh filename="ur20_meshes/visual/shoulder.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/shoulder.stl"/>
+        <mesh filename="ur20_meshes/collision/shoulder.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -491,13 +491,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/upperarm.dae"/>
+        <mesh filename="ur20_meshes/visual/upperarm.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/upperarm.stl"/>
+        <mesh filename="ur20_meshes/collision/upperarm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -510,13 +510,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/forearm.dae"/>
+        <mesh filename="ur20_meshes/visual/forearm.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/forearm.stl"/>
+        <mesh filename="ur20_meshes/collision/forearm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -529,13 +529,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/wrist1.dae"/>
+        <mesh filename="ur20_meshes/visual/wrist1.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/wrist1.stl"/>
+        <mesh filename="ur20_meshes/collision/wrist1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -548,13 +548,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.0749"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/wrist2.dae"/>
+        <mesh filename="ur20_meshes/visual/wrist2.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0749"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/wrist2.stl"/>
+        <mesh filename="ur20_meshes/collision/wrist2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -567,13 +567,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/wrist3.dae"/>
+        <mesh filename="ur20_meshes/visual/wrist3.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/wrist3.stl"/>
+        <mesh filename="ur20_meshes/collision/wrist3.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1011,7 +1011,7 @@
   <link name="han_mount_adapter">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/MOUNT_PLATE_VISUAL.STL"/>
+        <mesh filename="rss_meshes/MOUNT_PLATE_VISUAL.STL"/>
       </geometry>
       <material name="gold">
         <color rgba="0.90 0.80 0 1"/>
@@ -1021,7 +1021,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/MOUNT_PLATE.STL"/>
+        <mesh filename="rss_meshes/MOUNT_PLATE.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -1040,7 +1040,7 @@
   <link name="han_gripper_adapter">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/GRIPPER_PLATE_VISUAL.STL"/>
+        <mesh filename="rss_meshes/GRIPPER_PLATE_VISUAL.STL"/>
       </geometry>
       <material name="gold">
         <color rgba="0.90 0.80 0 1"/>
@@ -1050,7 +1050,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/GRIPPER_PLATE.STL"/>
+        <mesh filename="rss_meshes/GRIPPER_PLATE.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -1069,7 +1069,7 @@
     <visual>
       <origin rpy="0.0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/CAMERA_MOUNT_VISUAL.STL"/>
+        <mesh filename="rss_meshes/CAMERA_MOUNT_VISUAL.STL"/>
       </geometry>
       <material name="gold">
         <color rgba="0.90 0.80 0 1"/>
@@ -1078,7 +1078,7 @@
     <collision>
       <origin rpy="0.0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/CAMERA_MOUNT.STL"/>
+        <mesh filename="rss_meshes/CAMERA_MOUNT.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1090,7 +1090,7 @@
   <link name="han_camera">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/CAMERA_VISUAL_BASE.STL"/>
+        <mesh filename="rss_meshes/CAMERA_VISUAL_BASE.STL"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -1099,7 +1099,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/CAMERA_VISUAL_GLASS.STL"/>
+        <mesh filename="rss_meshes/CAMERA_VISUAL_GLASS.STL"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -1108,7 +1108,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/CAMERA_VISUAL_FRAME.STL"/>
+        <mesh filename="rss_meshes/CAMERA_VISUAL_FRAME.STL"/>
       </geometry>
       <material name="silver">
         <color rgba="0.75 0.75 0.75 1"/>
@@ -1118,7 +1118,7 @@
     <collision>
       <origin rpy="0.0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/CAMERA.STL"/>
+        <mesh filename="rss_meshes/CAMERA.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1130,7 +1130,7 @@
   <link name="han_zimmer_body">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_BOX.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_BOX.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="zimmer_black">
@@ -1140,7 +1140,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_BOX.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_BOX.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -1158,7 +1158,7 @@
   <link name="han_finger_mount_left">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="zimmer_silver">
@@ -1167,7 +1167,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -1182,7 +1182,7 @@
   <link name="han_finger_mount_right">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="zimmer_silver">
@@ -1191,7 +1191,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -1213,7 +1213,7 @@
   <link name="han_right_finger">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="gold">
@@ -1222,7 +1222,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -1235,7 +1235,7 @@
   <link name="han_left_finger">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="gold">
@@ -1244,7 +1244,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -1417,7 +1417,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/tombstone.stl"/>
+        <mesh filename="rss_meshes/tombstone.stl"/>
       </geometry>
       <material name="Black(ish)">
         <color rgba="0.1216 0.1216 0.1216 1.0"/>
@@ -1426,7 +1426,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/tombstone.stl"/>
+        <mesh filename="rss_meshes/tombstone.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1459,13 +1459,13 @@
     <visual>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/base.dae"/>
+        <mesh filename="ur20_meshes/visual/base.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/base.stl"/>
+        <mesh filename="ur20_meshes/collision/base.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1478,13 +1478,13 @@
     <visual>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/shoulder.dae"/>
+        <mesh filename="ur20_meshes/visual/shoulder.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/shoulder.stl"/>
+        <mesh filename="ur20_meshes/collision/shoulder.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1497,13 +1497,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/upperarm.dae"/>
+        <mesh filename="ur20_meshes/visual/upperarm.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/upperarm.stl"/>
+        <mesh filename="ur20_meshes/collision/upperarm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1516,13 +1516,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/forearm.dae"/>
+        <mesh filename="ur20_meshes/visual/forearm.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/forearm.stl"/>
+        <mesh filename="ur20_meshes/collision/forearm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1535,13 +1535,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/wrist1.dae"/>
+        <mesh filename="ur20_meshes/visual/wrist1.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/wrist1.stl"/>
+        <mesh filename="ur20_meshes/collision/wrist1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1554,13 +1554,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.0749"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/wrist2.dae"/>
+        <mesh filename="ur20_meshes/visual/wrist2.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0749"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/wrist2.stl"/>
+        <mesh filename="ur20_meshes/collision/wrist2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -1573,13 +1573,13 @@
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/visual/wrist3.dae"/>
+        <mesh filename="ur20_meshes/visual/wrist3.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07"/>
       <geometry>
-        <mesh filename="package://ur_description/meshes/ur20/collision/wrist3.stl"/>
+        <mesh filename="ur20_meshes/collision/wrist3.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -2017,7 +2017,7 @@
   <link name="chewie_mount_adapter">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/MOUNT_PLATE_VISUAL.STL"/>
+        <mesh filename="rss_meshes/MOUNT_PLATE_VISUAL.STL"/>
       </geometry>
       <material name="gold">
         <color rgba="0.90 0.80 0 1"/>
@@ -2027,7 +2027,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/MOUNT_PLATE.STL"/>
+        <mesh filename="rss_meshes/MOUNT_PLATE.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -2046,7 +2046,7 @@
   <link name="chewie_gripper_adapter">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/GRIPPER_PLATE_VISUAL.STL"/>
+        <mesh filename="rss_meshes/GRIPPER_PLATE_VISUAL.STL"/>
       </geometry>
       <material name="gold">
         <color rgba="0.90 0.80 0 1"/>
@@ -2056,7 +2056,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/GRIPPER_PLATE.STL"/>
+        <mesh filename="rss_meshes/GRIPPER_PLATE.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -2074,7 +2074,7 @@
   <link name="chewie_zimmer_body">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_BOX.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_BOX.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="zimmer_black">
@@ -2084,7 +2084,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_BOX.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_BOX.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -2102,7 +2102,7 @@
   <link name="chewie_finger_mount_left">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="zimmer_silver">
@@ -2111,7 +2111,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -2126,7 +2126,7 @@
   <link name="chewie_finger_mount_right">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="zimmer_silver">
@@ -2135,7 +2135,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/ZIMMER_SLIDE.STL"/>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -2157,7 +2157,7 @@
   <link name="chewie_right_finger">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="gold">
@@ -2166,7 +2166,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -2179,7 +2179,7 @@
   <link name="chewie_left_finger">
     <visual>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="gold">
@@ -2188,7 +2188,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="/home/jh73385/Research/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/ssti_robots/rss/meshes/Hex_Gripper.STL"/>
+        <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
