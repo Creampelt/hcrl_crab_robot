@@ -3,6 +3,12 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="chaser_satellite">
+  <material name="gold_transparent">
+    <color rgba="0.839 0.592 0.149 0.4"/>
+  </material>
+  <material name="gold">
+    <color rgba="0.90 0.80 0 1"/>
+  </material>
   <link name="base_link"/>
   <link name="slide_optical_plate">
     <visual>
@@ -21,7 +27,7 @@
       </geometry>
     </collision>
   </link>
-  <joint name="slide_optical_plate_joint" type="floating">
+  <joint name="slide_optical_plate_joint" type="fixed">
     <parent link="base_link"/>
     <child link="slide_optical_plate"/>
   </joint>
@@ -31,9 +37,7 @@
       <geometry>
         <box size="1.0 1.0 1.0"/>
       </geometry>
-      <material name="gold_transparent">
-        <color rgba="0.839 0.592 0.149 0.4"/>
-      </material>
+      <material name="gold_transparent"/> 
     </visual>
     <!-- JUNETTE: You can change this intertia as needed, it is the simulated capture vehicle inertia -->
     <inertial>
@@ -1013,9 +1017,7 @@
       <geometry>
         <mesh filename="rss_meshes/MOUNT_PLATE_VISUAL.STL"/>
       </geometry>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/> 
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
@@ -1042,9 +1044,7 @@
       <geometry>
         <mesh filename="rss_meshes/GRIPPER_PLATE_VISUAL.STL"/>
       </geometry>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/> 
       <origin rpy="0 0 0" xyz="-0.00635 0 0"/>
     </visual>
     <collision>
@@ -1071,9 +1071,7 @@
       <geometry>
         <mesh filename="rss_meshes/CAMERA_MOUNT_VISUAL.STL"/>
       </geometry>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/> 
     </visual>
     <collision>
       <origin rpy="0.0 0 0" xyz="0 0 0"/>
@@ -1216,9 +1214,7 @@
         <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/> 
     </visual>
     <collision>
       <geometry>
@@ -1238,9 +1234,7 @@
         <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/> 
     </visual>
     <collision>
       <geometry>
@@ -2019,9 +2013,7 @@
       <geometry>
         <mesh filename="rss_meshes/MOUNT_PLATE_VISUAL.STL"/>
       </geometry>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/> 
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
     <collision>
@@ -2048,9 +2040,7 @@
       <geometry>
         <mesh filename="rss_meshes/GRIPPER_PLATE_VISUAL.STL"/>
       </geometry>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/>
       <origin rpy="0 0 0" xyz="-0.00635 0 0"/>
     </visual>
     <collision>
@@ -2160,9 +2150,7 @@
         <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/>
     </visual>
     <collision>
       <geometry>
@@ -2182,9 +2170,7 @@
         <mesh filename="rss_meshes/Hex_Gripper.STL"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="gold">
-        <color rgba="0.90 0.80 0 1"/>
-      </material>
+      <material name="gold"/>
     </visual>
     <collision>
       <geometry>

@@ -3,7 +3,25 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="target_satellite">
-  <link name="base_link"/>
+  <material name="white">
+    <color rgba="1 1 1 0.1"/>
+  </material>
+  <material name="handle_color"> 
+    <color rgba="0.1 0.1 0.1 1.0"/> 
+  </material> 
+  <material name="black_transparent">
+    <color rgba="0 0 0 0.5"/> 
+  </material> 
+  <material name="body_color"> 
+    <color rgba="0.839 0.592 0.149 1.0"/> 
+  </material> 
+  <material name="gray_ish">
+    <color rgba="0.427 0.455 0.478 1.0"/>
+  </material>
+  <material name="gold_transparent">
+    <color rgba="0.839 0.592 0.149 0.4"/>
+  </material>
+  <!-- <link name="base_link"/> -->
   <link name="rotary_optical_plate"> <!-- TARGET SATELLITE -->
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.0127"/>
@@ -21,10 +39,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="rotary_optical_plate_joint" type="floating">
+  <!-- <joint name="rotary_optical_plate_joint" type="fixed">
     <parent link="base_link"/>
     <child link="rotary_optical_plate"/>
-  </joint>
+  </joint> -->
   <link name="rotary_FTS_combined"/>
   <joint name="OpticalToFTScombined_joint" type="fixed">
     <parent link="rotary_optical_plate"/>
@@ -57,9 +75,7 @@
       <geometry>
         <cylinder length="0.0693" radius="0.07825"/>
       </geometry>
-      <material name="Gray(ish)">
-        <color rgba="0.427 0.455 0.478 1.0"/>
-      </material>
+      <material name="gray_ish"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.03465"/>
@@ -93,9 +109,7 @@
       <geometry>
         <cylinder length="0.0693" radius="0.07825"/>
       </geometry>
-      <material name="Gray(ish)">
-        <color rgba="0.427 0.455 0.478 1.0"/>
-      </material>
+      <material name="gray_ish"/> 
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.03465"/>
@@ -129,9 +143,7 @@
       <geometry>
         <cylinder length="0.0693" radius="0.07825"/>
       </geometry>
-      <material name="Gray(ish)">
-        <color rgba="0.427 0.455 0.478 1.0"/>
-      </material>
+      <material name="gray_ish"/> 
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.03465"/>
@@ -165,9 +177,7 @@
       <geometry>
         <mesh filename="rss_meshes/simple_satellite.stl"/>
       </geometry>
-      <material name="gold_transparent">
-        <color rgba="0.839 0.592 0.149 0.4"/>
-      </material>
+      <material name="gold_transparent"/> 
     </visual>
     <collision>
       <origin rpy="0 0 0.523599" xyz="0 0 0"/>
@@ -230,9 +240,7 @@
       <geometry>
         <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
-      <material name="black_transparent">
-        <color rgba="0 0 0 0.5"/>
-      </material>
+      <material name="black_transparent"/> 
     </visual>
   </link>
   <joint name="handle_1_mount_joint" type="fixed">
@@ -252,9 +260,7 @@
       <geometry>
         <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
-      <material name="black_transparent">
-        <color rgba="0 0 0 0.5"/>
-      </material>
+      <material name="black_transparent"/> 
     </visual>
   </link>
   <joint name="handle_2_mount_joint" type="fixed">
@@ -274,9 +280,7 @@
       <geometry>
         <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
-      <material name="black_transparent">
-        <color rgba="0 0 0 0.5"/>
-      </material>
+      <material name="black_transparent"/> 
     </visual>
   </link>
   <joint name="handle_3_mount_joint" type="fixed">
@@ -296,9 +300,7 @@
       <geometry>
         <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
-      <material name="black_transparent">
-        <color rgba="0 0 0 0.5"/>
-      </material>
+      <material name="black_transparent"/> 
     </visual>
   </link>
   <joint name="handle_4_mount_joint" type="fixed">
@@ -318,9 +320,7 @@
       <geometry>
         <mesh filename="rss_meshes/Hex_Grip_Collision.stl"/>
       </geometry>
-      <material name="black_transparent">
-        <color rgba="0 0 0 0.5"/>
-      </material>
+      <material name="black_transparent"/> 
     </visual>
   </link>
   <joint name="handle_5_mount_joint" type="fixed">
@@ -336,9 +336,7 @@
   </joint>
   <link name="rotary_coordinate_frame">
     <visual>
-      <material name="White">
-        <color rgba="1 1 1 0.1"/>
-      </material>
+      <material name="white"/> 
       <origin rpy="0 0 0" xyz="0 0 0.07"/>
       <geometry>
         <cylinder length="0.14" radius="0.01"/>
