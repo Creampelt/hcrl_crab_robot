@@ -1,3 +1,8 @@
+# Copyright (c) 2022-2026, The Isaac Lab Project Developers (https://github.com/isaac-sim/IsaacLab/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 asset_path: /home/emily/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/hcrl_robots/spacecraft/spacecraft.urdf
 usd_dir: /home/emily/hcrl_isaac_manager/resources/IsaacLab/source/hcrl_isaaclab/resources/hcrl_robots/spacecraft/spacecraft_usd
 usd_file_name: null
