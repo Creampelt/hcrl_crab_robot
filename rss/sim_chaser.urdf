@@ -48,7 +48,7 @@
   <joint name="ArmedFloating_Joint" type="fixed">
     <parent link="slide_optical_plate"/>
     <child link="armed_mockup"/>
-    <origin rpy="0 0 0" xyz="0 0 0.705"/>
+    <origin rpy="0 0 0.7071" xyz="0 0 0.705"/>
   </joint>
   <link name="slide_coordinate_frame">
     <visual>
