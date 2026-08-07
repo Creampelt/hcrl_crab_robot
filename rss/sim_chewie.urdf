@@ -1,0 +1,1098 @@
+<robot name="chewie_arm">
+  <material name="gold_transparent">
+    <color rgba="0.839 0.592 0.149 0.4" />
+  </material>
+  <material name="gold">
+    <color rgba="0.90 0.80 0 1" />
+  </material>
+  <link name="base_link" />
+  <link name="slide_optical_plate">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
+      <geometry>
+        <cylinder length="0.0254" radius="0.6" />
+      </geometry>
+      <material name="Black(ish)">
+        <color rgba="0.1216 0.1216 0.1216 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
+      <geometry>
+        <cylinder length="0.0254" radius="0.6" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="slide_optical_plate_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="slide_optical_plate" />
+  </joint>
+  <link name="slide_coordinate_frame">
+    <visual>
+      <material name="White">
+        <color rgba="1 1 1 0.1" />
+      </material>
+      <origin rpy="0 0 0" xyz="0 0 0.07" />
+      <geometry>
+        <cylinder length="0.14" radius="0.01" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="-1.5708 0 0" xyz="0 0.07 0" />
+      <geometry>
+        <cylinder length="0.14" radius="0.01" />
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0 1.5708 0" xyz="0.07 0 0" />
+      <geometry>
+        <cylinder length="0.14" radius="0.01" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.07" />
+      <geometry>
+        <cylinder length="0.14" radius="0.01" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="-1.5708 0 0" xyz="0 0.07 0" />
+      <geometry>
+        <cylinder length="0.14" radius="0.01" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 1.5708 0" xyz="0.07 0 0" />
+      <geometry>
+        <cylinder length="0.14" radius="0.01" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/slide_coordinate_frame.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/slide_coordinate_frame.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="slide_coordinate_frame_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.1778" />
+    <parent link="slide_optical_plate" />
+    <child link="slide_coordinate_frame" />
+  </joint>
+  <link name="slide_simulation_frame">
+    </link>
+  <joint name="slide_simulation_frame_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.705" />
+    <parent link="slide_optical_plate" />
+    <child link="slide_simulation_frame" />
+  </joint>
+  <link name="chewie_bota_lax_triplet_mount">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
+      <geometry>
+        <cylinder length="0.0254" radius="0.2159" />
+      </geometry>
+      <material name="Black(ish)">
+        <color rgba="0.1216 0.1216 0.1216 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
+      <geometry>
+        <cylinder length="0.0254" radius="0.2159" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="chewie_bota_lax_triplet_to_table_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.2286 -0.2794 0.0254" />
+    <parent link="slide_optical_plate" />
+    <child link="chewie_bota_lax_triplet_mount" />
+  </joint>
+  <link name="chewie_alpha_base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/mounting.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.02225" />
+      <geometry>
+        <cylinder length="0.0445" radius="0.0415" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.0465 0.015" />
+      <geometry>
+        <box size="0.018 0.015 0.027" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 -0.0665 0.015" />
+      <geometry>
+        <cylinder length="0.032" radius="0.0065" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="chewie_alpha_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.04927 -0.14298 0" />
+    <parent link="chewie_bota_lax_triplet_mount" />
+    <child link="chewie_alpha_base" />
+  </joint>
+  <link name="chewie_alpha_imu"> </link>
+  <joint name="chewie_alpha_base_to_imu" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.01195" />
+    <parent link="chewie_alpha_base" />
+    <child link="chewie_alpha_imu" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="chewie_alpha_wrench"> </link>
+  <joint name="chewie_alpha_base_to_wrench" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0445" />
+    <parent link="chewie_alpha_base" />
+    <child link="chewie_alpha_wrench" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="chewie_bravo_base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/mounting.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.02225" />
+      <geometry>
+        <cylinder length="0.0445" radius="0.0415" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.0465 0.015" />
+      <geometry>
+        <box size="0.018 0.015 0.027" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 -0.0665 0.015" />
+      <geometry>
+        <cylinder length="0.032" radius="0.0065" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="chewie_bravo_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.1651 0 0" />
+    <parent link="chewie_bota_lax_triplet_mount" />
+    <child link="chewie_bravo_base" />
+  </joint>
+  <link name="chewie_bravo_imu"> </link>
+  <joint name="chewie_bravo_base_to_imu" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.01195" />
+    <parent link="chewie_bravo_base" />
+    <child link="chewie_bravo_imu" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="chewie_bravo_wrench"> </link>
+  <joint name="chewie_bravo_base_to_wrench" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0445" />
+    <parent link="chewie_bravo_base" />
+    <child link="chewie_bravo_wrench" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="chewie_charlie_base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/mounting.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.02225" />
+      <geometry>
+        <cylinder length="0.0445" radius="0.0415" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.0465 0.015" />
+      <geometry>
+        <box size="0.018 0.015 0.027" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 -0.0665 0.015" />
+      <geometry>
+        <cylinder length="0.032" radius="0.0065" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="chewie_charlie_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.04927 0.14298 0" />
+    <parent link="chewie_bota_lax_triplet_mount" />
+    <child link="chewie_charlie_base" />
+  </joint>
+  <link name="chewie_charlie_imu"> </link>
+  <joint name="chewie_charlie_base_to_imu" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.01195" />
+    <parent link="chewie_charlie_base" />
+    <child link="chewie_charlie_imu" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="chewie_charlie_wrench"> </link>
+  <joint name="chewie_charlie_base_to_wrench" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0445" />
+    <parent link="chewie_charlie_base" />
+    <child link="chewie_charlie_wrench" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="chewie_fts_combined" />
+  <joint name="chewie_bota_lax_triplet_mount_to_fts_joint" type="fixed">
+    <parent link="chewie_bota_lax_triplet_mount" />
+    <child link="chewie_fts_combined" />
+    <origin rpy="0 0 0" xyz="0 0 0.0445" />
+  </joint>
+  <link name="chewie_bota_lax_triplet_top_plate">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
+      <geometry>
+        <cylinder length="0.0254" radius="0.2159" />
+      </geometry>
+      <material name="Black(ish)">
+        <color rgba="0.1216 0.1216 0.1216 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
+      <geometry>
+        <cylinder length="0.0254" radius="0.2159" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0003 0 -0.0005" />
+      <mass value="10.2563" />
+      <inertia ixx="0.1197" ixy="0" ixz="0.0001" iyy="0.1198" iyz="0" izz="0.2382" />
+    </inertial>
+  </link>
+  <joint name="chewie_bota_lax_triplet_fts_combined_to_top_plate_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.030199999999999998" />
+    <parent link="chewie_fts_combined" />
+    <child link="chewie_bota_lax_triplet_top_plate" />
+  </joint>
+  <link name="chewie_tombstone_base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/tombstone.stl" />
+      </geometry>
+      <material name="Black(ish)">
+        <color rgba="0.1216 0.1216 0.1216 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/tombstone.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0519 0 0.0782" />
+      <mass value="4.459" />
+      <inertia ixx="0.0404" ixy="0" ixz="0.0090" iyy="0.0365" iyz="0" izz="0.0259" />
+    </inertial>
+  </link>
+  <link name="chewie_tombstone_face" />
+  <joint name="chewie_tombstone_face_joint" type="fixed">
+    <origin rpy="1.5708 0 1.5708" xyz="0.095 0 0.1352" />
+    <parent link="chewie_tombstone_base" />
+    <child link="chewie_tombstone_face" />
+  </joint>
+  <joint name="chewie_tombstone_base_joint" type="fixed">
+    <origin rpy="0 0 -0.5235987755982988" xyz="0.0438 0 0" />
+    <parent link="chewie_bota_lax_triplet_top_plate" />
+    <child link="chewie_tombstone_base" />
+  </joint>
+  <link name="chewie_base_link" />
+  <link name="chewie_base_link_inertia">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/base.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/base.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4.0" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <inertia ixx="0.0061063308908" ixy="0.0" ixz="0.0" iyy="0.0061063308908" iyz="0.0" izz="0.01125" />
+    </inertial>
+  </link>
+  <link name="chewie_shoulder_link">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/shoulder.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/shoulder.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="16.343" />
+      <origin rpy="1.570796326794897 0 0" xyz="0.0 -0.0062 -0.061" />
+      <inertia ixx="0.08866" ixy="-0.00011" ixz="-0.00011" iyy="0.07632" iyz="0.0072" izz="0.08418" />
+    </inertial>
+  </link>
+  <link name="chewie_upper_arm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/upperarm.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/upperarm.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="29.632" />
+      <origin rpy="0 0 0" xyz="-0.3394 0.0 0.2098" />
+      <inertia ixx="0.1467" ixy="0.00019" ixz="-0.05163" iyy="4.6659" iyz="4e-05" izz="4.6348" />
+    </inertial>
+  </link>
+  <link name="chewie_forearm_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/forearm.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/forearm.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="7.879" />
+      <origin rpy="0 0 0" xyz="-0.4053 0.0 0.0604" />
+      <inertia ixx="0.02612" ixy="-5e-05" ixz="-0.02898" iyy="0.75763" iyz="-1e-05" izz="0.75327" />
+    </inertial>
+  </link>
+  <link name="chewie_wrist_1_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/wrist1.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/wrist1.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.054" />
+      <origin rpy="1.570796326794897 0 0" xyz="0.0 -0.0393 -0.0026" />
+      <inertia ixx="0.00555" ixy="-1e-05" ixz="-2e-05" iyy="0.00537" iyz="0.00036" izz="0.00402" />
+    </inertial>
+  </link>
+  <link name="chewie_wrist_2_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -0.0749" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/wrist2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.0749" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/wrist2.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.126" />
+      <origin rpy="-1.570796326794897 0 0" xyz="0.0 0.0379 -0.0024" />
+      <inertia ixx="0.00586" ixy="-1e-05" ixz="-2e-05" iyy="0.00578" iyz="-0.00037" izz="0.00427" />
+    </inertial>
+  </link>
+  <link name="chewie_wrist_3_link">
+    <visual>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07" />
+      <geometry>
+        <mesh filename="ur20_meshes/visual/wrist3.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07" />
+      <geometry>
+        <mesh filename="ur20_meshes/collision/wrist3.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.926" />
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0293" />
+      <inertia ixx="0.00092" ixy="0.0" ixz="0.0" iyy="0.00091" iyz="0.0" izz="0.00117" />
+    </inertial>
+  </link>
+  <joint name="chewie_base_joint" type="fixed">
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+    <parent link="chewie_tombstone_face" />
+    <child link="chewie_base_link" />
+  </joint>
+  <joint name="chewie_base_link-base_link_inertia" type="fixed">
+    <parent link="chewie_base_link" />
+    <child link="chewie_base_link_inertia" />
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+  </joint>
+  <joint name="chewie_shoulder_pan_joint" type="revolute">
+    <parent link="chewie_base_link_inertia" />
+    <child link="chewie_shoulder_link" />
+    <origin rpy="0 0 7.594514559987483e-08" xyz="0 0 0.23609284540449268" />
+    <axis xyz="0 0 1" />
+    <limit effort="738.0" lower="-0.3490658503988659" upper="6.283185307179586" velocity="2.0943951023931953" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="chewie_shoulder_lift_joint" type="revolute">
+    <parent link="chewie_shoulder_link" />
+    <child link="chewie_upper_arm_link" />
+    <origin rpy="1.5701520769043074 0 3.857799593338793e-07" xyz="0.00011181480128890022 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="738.0" lower="-0.3490658503988659" upper="6.283185307179586" velocity="2.0943951023931953" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="chewie_elbow_joint" type="revolute">
+    <parent link="chewie_upper_arm_link" />
+    <child link="chewie_forearm_link" />
+    <origin rpy="3.1398599965673757 3.141584878747044 3.141591829972127" xyz="-0.861111559080106 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="433.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="2.6179938779914944" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="chewie_wrist_1_joint" type="revolute">
+    <parent link="chewie_forearm_link" />
+    <child link="chewie_wrist_1_link" />
+    <origin rpy="3.137890954614422 -3.1414811831297196 -3.1415913105294244" xyz="-0.7278751696702177 0.000740139712493624 0.19994503518740356" />
+    <axis xyz="0 0 1" />
+    <limit effort="107.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.6651914291880923" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="chewie_wrist_2_joint" type="revolute">
+    <parent link="chewie_wrist_1_link" />
+    <child link="chewie_wrist_2_link" />
+    <origin rpy="1.5714649591971852 0 -1.4917124264842913e-06" xyz="4.8877080866131635e-05 -0.15913066523045977 -0.00010639993482687162" />
+    <axis xyz="0 0 1" />
+    <limit effort="107.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.6651914291880923" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="chewie_wrist_3_joint" type="revolute">
+    <parent link="chewie_wrist_2_link" />
+    <child link="chewie_wrist_3_link" />
+    <origin rpy="1.5717957424904563 3.141592653589793 3.1415923617874415" xyz="-3.4453664351610695e-05 0.1540126838449599 0.000153922744797584" />
+    <axis xyz="0 0 1" />
+    <limit effort="107.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.6651914291880923" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <link name="chewie_ft_frame" />
+  <joint name="chewie_wrist_3_link-ft_frame" type="fixed">
+    <parent link="chewie_wrist_3_link" />
+    <child link="chewie_ft_frame" />
+    <origin rpy="3.141592653589793 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="chewie_base" />
+  <joint name="chewie_base_link-base_fixed_joint" type="fixed">
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+    <parent link="chewie_base_link" />
+    <child link="chewie_base" />
+  </joint>
+  <link name="chewie_flange" />
+  <joint name="chewie_wrist_3-flange" type="fixed">
+    <parent link="chewie_wrist_3_link" />
+    <child link="chewie_flange" />
+    <origin rpy="0 -1.5707963267948966 -1.5707963267948966" xyz="0 0 0" />
+  </joint>
+  <link name="chewie_tool0" />
+  <joint name="chewie_flange-tool0" type="fixed">
+    <origin rpy="1.5707963267948966 0 1.5707963267948966" xyz="0 0 0" />
+    <parent link="chewie_flange" />
+    <child link="chewie_tool0" />
+  </joint>
+  <ros2_control name="chewie" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+      <param name="mock_sensor_commands">True</param>
+      <param name="state_following_offset">0.0</param>
+      <param name="calculate_dynamics">true</param>
+    </hardware>
+    <joint name="chewie_shoulder_pan_joint">
+      <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
+      <state_interface name="position">
+        <param name="initial_value">3.14</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="chewie_shoulder_lift_joint">
+      <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
+      <state_interface name="position">
+        <param name="initial_value">2.0944</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="chewie_elbow_joint">
+      <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
+      <state_interface name="position">
+        <param name="initial_value">2.61799</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="chewie_wrist_1_joint">
+      <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
+      <state_interface name="position">
+        <param name="initial_value">-2.96706</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="chewie_wrist_2_joint">
+      <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
+      <state_interface name="position">
+        <param name="initial_value">-1.309</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <joint name="chewie_wrist_3_joint">
+      <command_interface name="position" />
+      <command_interface name="velocity" />
+      <command_interface name="effort" />
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="effort">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <sensor name="chewie_tcp_fts_sensor">
+      <state_interface name="force.x" />
+      <state_interface name="force.y" />
+      <state_interface name="force.z" />
+      <state_interface name="torque.x" />
+      <state_interface name="torque.y" />
+      <state_interface name="torque.z" />
+    </sensor>
+    <sensor name="chewie_tcp_pose">
+      <state_interface name="position.x" />
+      <state_interface name="position.y" />
+      <state_interface name="position.z" />
+      <state_interface name="orientation.x" />
+      <state_interface name="orientation.y" />
+      <state_interface name="orientation.z" />
+      <state_interface name="orientation.w" />
+    </sensor>
+    <gpio name="chewie_speed_scaling">
+      <state_interface name="speed_scaling_factor">
+        <param name="initial_value">1.0</param>
+      </state_interface>
+      <command_interface name="target_speed_fraction_cmd" />
+      <command_interface name="target_speed_fraction_async_success" />
+    </gpio>
+    <gpio name="chewie_gpio">
+      <command_interface name="standard_digital_output_cmd_0" />
+      <command_interface name="standard_digital_output_cmd_1" />
+      <command_interface name="standard_digital_output_cmd_2" />
+      <command_interface name="standard_digital_output_cmd_3" />
+      <command_interface name="standard_digital_output_cmd_4" />
+      <command_interface name="standard_digital_output_cmd_5" />
+      <command_interface name="standard_digital_output_cmd_6" />
+      <command_interface name="standard_digital_output_cmd_7" />
+      <command_interface name="standard_digital_output_cmd_8" />
+      <command_interface name="standard_digital_output_cmd_9" />
+      <command_interface name="standard_digital_output_cmd_10" />
+      <command_interface name="standard_digital_output_cmd_11" />
+      <command_interface name="standard_digital_output_cmd_12" />
+      <command_interface name="standard_digital_output_cmd_13" />
+      <command_interface name="standard_digital_output_cmd_14" />
+      <command_interface name="standard_digital_output_cmd_15" />
+      <command_interface name="standard_digital_output_cmd_16" />
+      <command_interface name="standard_digital_output_cmd_17" />
+      <command_interface name="standard_analog_output_cmd_0" />
+      <command_interface name="standard_analog_output_cmd_1" />
+      <command_interface name="analog_output_domain_cmd" />
+      <command_interface name="tool_voltage_cmd" />
+      <command_interface name="io_async_success" />
+      <state_interface name="digital_output_0" />
+      <state_interface name="digital_output_1" />
+      <state_interface name="digital_output_2" />
+      <state_interface name="digital_output_3" />
+      <state_interface name="digital_output_4" />
+      <state_interface name="digital_output_5" />
+      <state_interface name="digital_output_6" />
+      <state_interface name="digital_output_7" />
+      <state_interface name="digital_output_8" />
+      <state_interface name="digital_output_9" />
+      <state_interface name="digital_output_10" />
+      <state_interface name="digital_output_11" />
+      <state_interface name="digital_output_12" />
+      <state_interface name="digital_output_13" />
+      <state_interface name="digital_output_14" />
+      <state_interface name="digital_output_15" />
+      <state_interface name="digital_output_16" />
+      <state_interface name="digital_output_17" />
+      <state_interface name="digital_input_0" />
+      <state_interface name="digital_input_1" />
+      <state_interface name="digital_input_2" />
+      <state_interface name="digital_input_3" />
+      <state_interface name="digital_input_4" />
+      <state_interface name="digital_input_5" />
+      <state_interface name="digital_input_6" />
+      <state_interface name="digital_input_7" />
+      <state_interface name="digital_input_8" />
+      <state_interface name="digital_input_9" />
+      <state_interface name="digital_input_10" />
+      <state_interface name="digital_input_11" />
+      <state_interface name="digital_input_12" />
+      <state_interface name="digital_input_13" />
+      <state_interface name="digital_input_14" />
+      <state_interface name="digital_input_15" />
+      <state_interface name="digital_input_16" />
+      <state_interface name="digital_input_17" />
+      <state_interface name="standard_analog_output_0" />
+      <state_interface name="standard_analog_output_1" />
+      <state_interface name="standard_analog_input_0" />
+      <state_interface name="standard_analog_input_1" />
+      <state_interface name="analog_io_type_0" />
+      <state_interface name="analog_io_type_1" />
+      <state_interface name="analog_io_type_2" />
+      <state_interface name="analog_io_type_3" />
+      <state_interface name="tool_mode" />
+      <state_interface name="tool_output_voltage" />
+      <state_interface name="tool_output_current" />
+      <state_interface name="tool_temperature" />
+      <state_interface name="tool_analog_input_0" />
+      <state_interface name="tool_analog_input_1" />
+      <state_interface name="tool_analog_input_type_0" />
+      <state_interface name="tool_analog_input_type_1" />
+      <state_interface name="robot_mode" />
+      <state_interface name="robot_status_bit_0" />
+      <state_interface name="robot_status_bit_1" />
+      <state_interface name="robot_status_bit_2" />
+      <state_interface name="robot_status_bit_3" />
+      <state_interface name="safety_mode" />
+      <state_interface name="safety_status_bit_0" />
+      <state_interface name="safety_status_bit_1" />
+      <state_interface name="safety_status_bit_2" />
+      <state_interface name="safety_status_bit_3" />
+      <state_interface name="safety_status_bit_4" />
+      <state_interface name="safety_status_bit_5" />
+      <state_interface name="safety_status_bit_6" />
+      <state_interface name="safety_status_bit_7" />
+      <state_interface name="safety_status_bit_8" />
+      <state_interface name="safety_status_bit_9" />
+      <state_interface name="safety_status_bit_10" />
+      <state_interface name="program_running" />
+    </gpio>
+    <gpio name="chewie_payload">
+      <command_interface name="mass" />
+      <command_interface name="cog.x" />
+      <command_interface name="cog.y" />
+      <command_interface name="cog.z" />
+      <command_interface name="payload_async_success" />
+    </gpio>
+    <gpio name="chewie_gravity">
+      <command_interface name="x" />
+      <command_interface name="y" />
+      <command_interface name="z" />
+      <command_interface name="gravity_async_success" />
+    </gpio>
+    <gpio name="chewie_resend_robot_program">
+      <command_interface name="resend_robot_program_cmd" />
+      <command_interface name="resend_robot_program_async_success" />
+    </gpio>
+    <gpio name="chewie_hand_back_control">
+      <command_interface name="hand_back_control_cmd" />
+      <command_interface name="hand_back_control_async_success" />
+    </gpio>
+    <gpio name="chewie_zero_ftsensor">
+      <command_interface name="zero_ftsensor_cmd" />
+      <command_interface name="zero_ftsensor_async_success" />
+    </gpio>
+    <gpio name="chewie_freedrive_mode">
+      <command_interface name="async_success" />
+      <command_interface name="enable" />
+      <command_interface name="abort" />
+    </gpio>
+    <gpio name="chewie_tool_contact">
+      <command_interface name="tool_contact_set_state" />
+      <state_interface name="tool_contact_result" />
+      <state_interface name="tool_contact_state" />
+    </gpio>
+    <gpio name="chewie_system_interface">
+      <state_interface name="initialized" />
+    </gpio>
+    <gpio name="chewie_force_mode">
+      <command_interface name="task_frame_x" />
+      <command_interface name="task_frame_y" />
+      <command_interface name="task_frame_z" />
+      <command_interface name="task_frame_rx" />
+      <command_interface name="task_frame_ry" />
+      <command_interface name="task_frame_rz" />
+      <command_interface name="selection_vector_x" />
+      <command_interface name="selection_vector_y" />
+      <command_interface name="selection_vector_z" />
+      <command_interface name="selection_vector_rx" />
+      <command_interface name="selection_vector_ry" />
+      <command_interface name="selection_vector_rz" />
+      <command_interface name="wrench_x" />
+      <command_interface name="wrench_y" />
+      <command_interface name="wrench_z" />
+      <command_interface name="wrench_rx" />
+      <command_interface name="wrench_ry" />
+      <command_interface name="wrench_rz" />
+      <command_interface name="limits_x" />
+      <command_interface name="limits_y" />
+      <command_interface name="limits_z" />
+      <command_interface name="limits_rx" />
+      <command_interface name="limits_ry" />
+      <command_interface name="limits_rz" />
+      <command_interface name="type" />
+      <command_interface name="damping" />
+      <command_interface name="gain_scaling" />
+      <command_interface name="disable_cmd" />
+      <command_interface name="force_mode_async_success" />
+    </gpio>
+    <gpio name="chewie_trajectory_passthrough">
+      <command_interface name="setpoint_positions_0" />
+      <command_interface name="setpoint_positions_1" />
+      <command_interface name="setpoint_positions_2" />
+      <command_interface name="setpoint_positions_3" />
+      <command_interface name="setpoint_positions_4" />
+      <command_interface name="setpoint_positions_5" />
+      <command_interface name="setpoint_velocities_0" />
+      <command_interface name="setpoint_velocities_1" />
+      <command_interface name="setpoint_velocities_2" />
+      <command_interface name="setpoint_velocities_3" />
+      <command_interface name="setpoint_velocities_4" />
+      <command_interface name="setpoint_velocities_5" />
+      <command_interface name="setpoint_accelerations_0" />
+      <command_interface name="setpoint_accelerations_1" />
+      <command_interface name="setpoint_accelerations_2" />
+      <command_interface name="setpoint_accelerations_3" />
+      <command_interface name="setpoint_accelerations_4" />
+      <command_interface name="setpoint_accelerations_5" />
+      <command_interface name="transfer_state" />
+      <command_interface name="time_from_start" />
+      <command_interface name="abort" />
+      <command_interface name="trajectory_size" />
+    </gpio>
+    <gpio name="chewie_get_robot_software_version">
+      <state_interface name="get_version_major">
+        <param name="initial_value">1</param>
+      </state_interface>
+      <state_interface name="get_version_minor" />
+      <state_interface name="get_version_build" />
+      <state_interface name="get_version_bugfix" />
+    </gpio>
+  </ros2_control>
+  <link name="chewie_ur_mounting_frame" />
+  <joint name="chewie_ur_mounting_frame_joint" type="fixed">
+    <origin rpy="0 -1.57078 1.5708" xyz="0 0 0" />
+    <parent link="chewie_tool0" />
+    <child link="chewie_ur_mounting_frame" />
+  </joint>
+  <link name="chewie_mount_adapter">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/MOUNT_PLATE_VISUAL.STL" />
+      </geometry>
+      <material name="gold" />
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/MOUNT_PLATE.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0048 -0.0005 0.0627" />
+      <mass value="0.3266" />
+      <inertia ixx="0.0010" ixy="0" ixz="0.0001" iyy="0.0006" iyz="0" izz="0.0004" />
+    </inertial>
+  </link>
+  <joint name="chewie_mount_adapter" type="fixed">
+    <parent link="chewie_ur_mounting_frame" />
+    <child link="chewie_mount_adapter" />
+    <origin rpy="0 0 0" xyz="0.00317 0 0" />
+  </joint>
+  <link name="chewie_gripper_adapter">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/GRIPPER_PLATE_VISUAL.STL" />
+      </geometry>
+      <material name="gold" />
+      <origin rpy="0 0 0" xyz="-0.00635 0 0" />
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/GRIPPER_PLATE.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0041 -0.0024 -0.0019" />
+      <mass value="0.2579" />
+      <inertia ixx="0.0007" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.0004" />
+    </inertial>
+  </link>
+  <joint name="chewie_gripper_adapter" type="fixed">
+    <parent link="chewie_mount_adapter" />
+    <child link="chewie_gripper_adapter" />
+    <origin rpy="3.141592653589793 0 0" xyz="0.00635 0 0" />
+  </joint>
+  <link name="chewie_zimmer_body">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/ZIMMER_BOX.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="zimmer_black">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="rss_meshes/ZIMMER_BOX.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0220 -0.0004 -0.0001" />
+      <mass value="0.81" />
+      <inertia ixx="0.0014" ixy="0" ixz="0" iyy="0.0008" iyz="0" izz="0.0017" />
+    </inertial>
+  </link>
+  <joint name="chewie_zimmer_body" type="fixed">
+    <parent link="chewie_gripper_adapter" />
+    <child link="chewie_zimmer_body" />
+    <origin rpy="0 0 0" xyz="0.045 0 0" />
+  </joint>
+  <link name="chewie_finger_mount_left">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="zimmer_silver">
+        <color rgba="0.75 0.75 0.75 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="chewie_gripper_finger1_joint" type="prismatic">
+    <parent link="chewie_zimmer_body" />
+    <child link="chewie_finger_mount_left" />
+    <limit effort="150" lower="-0.007" upper="0.052" velocity="0.01" />
+    <axis xyz="0 1 0" />
+    <origin rpy="3.1415 0 0" xyz="0.00075 0.053 -0.011" />
+  </joint>
+  <link name="chewie_finger_mount_right">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="zimmer_silver">
+        <color rgba="0.75 0.75 0.75 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="chewie_gripper_finger2_joint" type="prismatic">
+    <parent link="chewie_zimmer_body" />
+    <child link="chewie_finger_mount_right" />
+    <limit effort="150" lower="-0.007" upper="0.052" velocity="0.01" />
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 0" xyz="0.00075 -0.053 0.011" />
+  </joint>
+  <link name="chewie_zimmer_grasp_frame" />
+  <joint name="chewie_zimmer_grasp_frame_joint" type="fixed">
+    <parent link="chewie_zimmer_body" />
+    <child link="chewie_zimmer_grasp_frame" />
+    <origin rpy="3.141592653589793 0 0" xyz="0.0667 0 0" />
+  </joint>
+  <link name="chewie_right_finger">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/Hex_Gripper.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="gold" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="rss_meshes/Hex_Gripper.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="chewie_right_finger" type="fixed">
+    <parent link="chewie_finger_mount_right" />
+    <child link="chewie_right_finger" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="chewie_left_finger">
+    <visual>
+      <geometry>
+        <mesh filename="rss_meshes/Hex_Gripper.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="gold" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="rss_meshes/Hex_Gripper.STL" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="chewie_left_finger" type="fixed">
+    <parent link="chewie_finger_mount_left" />
+    <child link="chewie_left_finger" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="chewie_cable_harness_arm_link">
+    <visual>
+      <geometry>
+        <box size="0.07 0.1524 0.07" />
+      </geometry>
+      <origin rpy="-0.3141592653589793 0 0" xyz="-0.394 0.07 0.24000000000000002" />
+      <material name="harness_clear">
+        <color rgba="0 0 0 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.07 0.1524 0.07" />
+      </geometry>
+      <origin rpy="-0.3141592653589793 0 0" xyz="-0.394 0.07 0.24000000000000002" />
+    </collision>
+  </link>
+  <joint name="chewie_cable_harness_arm_link" type="fixed">
+    <parent link="chewie_upper_arm_link" />
+    <child link="chewie_cable_harness_arm_link" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="chewie_cable_harness_elbow_link">
+    <visual>
+      <geometry>
+        <box size="0.15 0.0762 0.15" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.05 0.1 0.075" />
+      <material name="harness_clear">
+        <color rgba="0 0 0 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.15 0.0762 0.15" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.05 0.1 0.075" />
+    </collision>
+  </link>
+  <joint name="chewie_cable_harness_elbow_link" type="fixed">
+    <parent link="chewie_forearm_link" />
+    <child link="chewie_cable_harness_elbow_link" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <link name="chewie_cable_harness_ee_link">
+    <visual>
+      <geometry>
+        <box size="0.1778 0.0762 0.0254" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0889 0 -0.0127" />
+      <material name="harness_clear">
+        <color rgba="0 0 0 0.2" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1778 0.0762 0.0254" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0889 0 -0.0127" />
+    </collision>
+  </link>
+  <joint name="chewie_cable_harness_ee_link" type="fixed">
+    <parent link="chewie_wrist_3_link" />
+    <child link="chewie_cable_harness_ee_link" />
+    <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
+  </joint>
+</robot>
