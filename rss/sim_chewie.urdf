@@ -49,36 +49,12 @@
         <cylinder length="0.14" radius="0.01" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.07" />
-      <geometry>
-        <cylinder length="0.14" radius="0.01" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="-1.5708 0 0" xyz="0 0.07 0" />
-      <geometry>
-        <cylinder length="0.14" radius="0.01" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="0 1.5708 0" xyz="0.07 0 0" />
-      <geometry>
-        <cylinder length="0.14" radius="0.01" />
-      </geometry>
-    </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
         <mesh filename="rss_meshes/slide_coordinate_frame.stl" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="rss_meshes/slide_coordinate_frame.stl" />
-      </geometry>
-    </collision>
   </link>
   <joint name="slide_coordinate_frame_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.1778" />
@@ -102,12 +78,6 @@
         <color rgba="0.1216 0.1216 0.1216 1.0" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
-      <geometry>
-        <cylinder length="0.0254" radius="0.2159" />
-      </geometry>
-    </collision>
   </link>
   <joint name="chewie_bota_lax_triplet_to_table_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.2286 -0.2794 0.0254" />
@@ -124,24 +94,6 @@
         <color rgba="0.50196 0.50196 0.50196 1" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.02225" />
-      <geometry>
-        <cylinder length="0.0445" radius="0.0415" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -0.0465 0.015" />
-      <geometry>
-        <box size="0.018 0.015 0.027" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="1.57 0 0" xyz="0 -0.0665 0.015" />
-      <geometry>
-        <cylinder length="0.032" radius="0.0065" />
-      </geometry>
-    </collision>
   </link>
   <joint name="chewie_alpha_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.04927 -0.14298 0" />
@@ -172,24 +124,6 @@
         <color rgba="0.50196 0.50196 0.50196 1" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.02225" />
-      <geometry>
-        <cylinder length="0.0445" radius="0.0415" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -0.0465 0.015" />
-      <geometry>
-        <box size="0.018 0.015 0.027" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="1.57 0 0" xyz="0 -0.0665 0.015" />
-      <geometry>
-        <cylinder length="0.032" radius="0.0065" />
-      </geometry>
-    </collision>
   </link>
   <joint name="chewie_bravo_joint" type="fixed">
     <origin rpy="0 0 0" xyz="-0.1651 0 0" />
@@ -220,24 +154,6 @@
         <color rgba="0.50196 0.50196 0.50196 1" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.02225" />
-      <geometry>
-        <cylinder length="0.0445" radius="0.0415" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -0.0465 0.015" />
-      <geometry>
-        <box size="0.018 0.015 0.027" />
-      </geometry>
-    </collision>
-    <collision>
-      <origin rpy="1.57 0 0" xyz="0 -0.0665 0.015" />
-      <geometry>
-        <cylinder length="0.032" radius="0.0065" />
-      </geometry>
-    </collision>
   </link>
   <joint name="chewie_charlie_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.04927 0.14298 0" />
@@ -274,12 +190,6 @@
         <color rgba="0.1216 0.1216 0.1216 1.0" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 -0.0127" />
-      <geometry>
-        <cylinder length="0.0254" radius="0.2159" />
-      </geometry>
-    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0003 0 -0.0005" />
       <mass value="10.2563" />
@@ -301,18 +211,19 @@
         <color rgba="0.1216 0.1216 0.1216 1.0" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="rss_meshes/tombstone.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0519 0 0.0782" />
       <mass value="4.459" />
       <inertia ixx="0.0404" ixy="0" ixz="0.0090" iyy="0.0365" iyz="0" izz="0.0259" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="0.000115 0 0.12885" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18977 0.245 0.2577" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_tombstone_face" />
   <joint name="chewie_tombstone_face_joint" type="fixed">
     <origin rpy="1.5708 0 1.5708" xyz="0.095 0 0.1352" />
@@ -332,18 +243,19 @@
         <mesh filename="ur20_meshes/visual/base.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/base.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="4.0" />
       <origin rpy="0 0 0" xyz="0 0 0" />
       <inertia ixx="0.0061063308908" ixy="0.0" ixz="0.0" iyy="0.0061063308908" iyz="0.0" izz="0.01125" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="-0.000028 0 0.054418" rpy="0 0 3.141593" />
+      <geometry>
+        <cylinder length="0.109" radius="0.1225" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_shoulder_link">
     <visual>
       <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
@@ -351,18 +263,19 @@
         <mesh filename="ur20_meshes/visual/shoulder.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/shoulder.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="16.343" />
       <origin rpy="1.570796326794897 0 0" xyz="0.0 -0.0062 -0.061" />
       <inertia ixx="0.08866" ixy="-0.00011" ixz="-0.00011" iyy="0.07632" iyz="0.0072" izz="0.08418" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="-0.000009 -0.022003 -0.01553" rpy="-1.570796 0 3.141593" />
+      <geometry>
+        <cylinder length="0.224" radius="0.095" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_upper_arm_link">
     <visual>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26" />
@@ -370,18 +283,19 @@
         <mesh filename="ur20_meshes/visual/upperarm.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/upperarm.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="29.632" />
       <origin rpy="0 0 0" xyz="-0.3394 0.0 0.2098" />
       <inertia ixx="0.1467" ixy="0.00019" ixz="-0.05163" iyy="4.6659" iyz="4e-05" izz="4.6348" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="-0.423244 -0.000296 0.240471" rpy="1.570796 0 -1.570796" />
+      <geometry>
+        <cylinder length="0.861" radius="0.09" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_forearm_link">
     <visual>
       <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043" />
@@ -389,18 +303,19 @@
         <mesh filename="ur20_meshes/visual/forearm.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/forearm.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="7.879" />
       <origin rpy="0 0 0" xyz="-0.4053 0.0 0.0604" />
       <inertia ixx="0.02612" ixy="-5e-05" ixz="-0.02898" iyy="0.75763" iyz="-1e-05" izz="0.75327" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="-0.351382 0.000036 0.055988" rpy="1.570796 0 -1.570796" />
+      <geometry>
+        <cylinder length="0.728" radius="0.075" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_wrist_1_link">
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775" />
@@ -408,18 +323,19 @@
         <mesh filename="ur20_meshes/visual/wrist1.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/wrist1.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="3.054" />
       <origin rpy="1.570796326794897 0 0" xyz="0.0 -0.0393 -0.0026" />
       <inertia ixx="0.00555" ixy="-1e-05" ixz="-2e-05" iyy="0.00537" iyz="0.00036" izz="0.00402" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="0.000007 -0.016111 -0.012918" rpy="1.570796 0 0" />
+      <geometry>
+        <cylinder length="0.137" radius="0.055" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_wrist_2_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.0749" />
@@ -427,18 +343,19 @@
         <mesh filename="ur20_meshes/visual/wrist2.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 -0.0749" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/wrist2.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="3.126" />
       <origin rpy="-1.570796326794897 0 0" xyz="0.0 0.0379 -0.0024" />
       <inertia ixx="0.00586" ixy="-1e-05" ixz="-2e-05" iyy="0.00578" iyz="-0.00037" izz="0.00427" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="-0.000068 0.015272 -0.012544" rpy="-1.570796 0 0" />
+      <geometry>
+        <cylinder length="0.138" radius="0.055" />
+      </geometry>
+    </collision>
+</link>
   <link name="chewie_wrist_3_link">
     <visual>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07" />
@@ -446,18 +363,19 @@
         <mesh filename="ur20_meshes/visual/wrist3.dae" />
       </geometry>
     </visual>
-    <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07" />
-      <geometry>
-        <mesh filename="ur20_meshes/collision/wrist3.stl" />
-      </geometry>
-    </collision>
     <inertial>
       <mass value="0.926" />
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.0293" />
       <inertia ixx="0.00092" ixy="0.0" ixz="0.0" iyy="0.00091" iyz="0.0" izz="0.00117" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="0 -0.002822 -0.0353" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.07" radius="0.053" />
+      </geometry>
+    </collision>
+</link>
   <joint name="chewie_base_joint" type="fixed">
     <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
     <parent link="chewie_tombstone_face" />
@@ -866,12 +784,6 @@
       <material name="gold" />
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="rss_meshes/MOUNT_PLATE.STL" />
-      </geometry>
-    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0048 -0.0005 0.0627" />
       <mass value="0.3266" />
@@ -891,12 +803,6 @@
       <material name="gold" />
       <origin rpy="0 0 0" xyz="-0.00635 0 0" />
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="rss_meshes/GRIPPER_PLATE.STL" />
-      </geometry>
-    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0041 -0.0024 -0.0019" />
       <mass value="0.2579" />
@@ -918,18 +824,19 @@
         <color rgba="0 0 0 1" />
       </material>
     </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-      <geometry>
-        <mesh filename="rss_meshes/ZIMMER_BOX.STL" />
-      </geometry>
-    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.0220 -0.0004 -0.0001" />
       <mass value="0.81" />
       <inertia ixx="0.0014" ixy="0" ixz="0" iyy="0.0008" iyz="0" izz="0.0017" />
     </inertial>
-  </link>
+  
+    <collision>
+      <origin xyz="-0.0225 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.13 0.062" />
+      </geometry>
+    </collision>
+</link>
   <joint name="chewie_zimmer_body" type="fixed">
     <parent link="chewie_gripper_adapter" />
     <child link="chewie_zimmer_body" />
@@ -945,12 +852,6 @@
         <color rgba="0.75 0.75 0.75 1" />
       </material>
     </visual>
-    <collision>
-      <geometry>
-        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL" />
-      </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-    </collision>
   </link>
   <joint name="chewie_gripper_finger1_joint" type="prismatic">
     <parent link="chewie_zimmer_body" />
@@ -969,12 +870,6 @@
         <color rgba="0.75 0.75 0.75 1" />
       </material>
     </visual>
-    <collision>
-      <geometry>
-        <mesh filename="rss_meshes/ZIMMER_SLIDE.STL" />
-      </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0" />
-    </collision>
   </link>
   <joint name="chewie_gripper_finger2_joint" type="prismatic">
     <parent link="chewie_zimmer_body" />
@@ -997,13 +892,14 @@
       <origin rpy="0 0 0" xyz="0 0 0" />
       <material name="gold" />
     </visual>
+  
     <collision>
+      <origin xyz="0.045818 -0.019749 -0.007825" rpy="0 0 0" />
       <geometry>
-        <mesh filename="rss_meshes/Hex_Gripper.STL" />
+        <box size="0.092905 0.0635 0.036351" />
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0" />
     </collision>
-  </link>
+</link>
   <joint name="chewie_right_finger" type="fixed">
     <parent link="chewie_finger_mount_right" />
     <child link="chewie_right_finger" />
@@ -1017,13 +913,14 @@
       <origin rpy="0 0 0" xyz="0 0 0" />
       <material name="gold" />
     </visual>
+  
     <collision>
+      <origin xyz="0.045818 -0.019749 -0.007825" rpy="0 0 0" />
       <geometry>
-        <mesh filename="rss_meshes/Hex_Gripper.STL" />
+        <box size="0.092905 0.0635 0.036351" />
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0" />
     </collision>
-  </link>
+</link>
   <joint name="chewie_left_finger" type="fixed">
     <parent link="chewie_finger_mount_left" />
     <child link="chewie_left_finger" />
@@ -1039,12 +936,6 @@
         <color rgba="0 0 0 0.2" />
       </material>
     </visual>
-    <collision>
-      <geometry>
-        <box size="0.07 0.1524 0.07" />
-      </geometry>
-      <origin rpy="-0.3141592653589793 0 0" xyz="-0.394 0.07 0.24000000000000002" />
-    </collision>
   </link>
   <joint name="chewie_cable_harness_arm_link" type="fixed">
     <parent link="chewie_upper_arm_link" />
@@ -1061,12 +952,6 @@
         <color rgba="0 0 0 0.2" />
       </material>
     </visual>
-    <collision>
-      <geometry>
-        <box size="0.15 0.0762 0.15" />
-      </geometry>
-      <origin rpy="0 0 0" xyz="-0.05 0.1 0.075" />
-    </collision>
   </link>
   <joint name="chewie_cable_harness_elbow_link" type="fixed">
     <parent link="chewie_forearm_link" />
@@ -1083,12 +968,6 @@
         <color rgba="0 0 0 0.2" />
       </material>
     </visual>
-    <collision>
-      <geometry>
-        <box size="0.1778 0.0762 0.0254" />
-      </geometry>
-      <origin rpy="0 0 0" xyz="0.0889 0 -0.0127" />
-    </collision>
   </link>
   <joint name="chewie_cable_harness_ee_link" type="fixed">
     <parent link="chewie_wrist_3_link" />
