@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="turksat_orbit">
+  <link name="thrust_frame">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="2411.710000" />
+      <inertia ixx="3097.980001" ixy="-5.506690" ixz="185.975000" iyy="3086.820000" iyz="20.680400" izz="1221.000001" />
+    </inertial>
+    <visual>
+      <origin xyz="-1.401371 0.626800 1.773094" rpy="-3.122582 0.017344 -1.571524" />
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl" />
+      </geometry>
+      <material name="satelliitedishbig_material">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.706779 0.280975 -0.781702" rpy="1.570794 -1.552325 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_1.stl" />
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-1.401371 -0.624854 1.773094" rpy="-3.122582 -0.017346 -1.570069" />
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl" />
+      </geometry>
+      <material name="satelliitedishbig_2_material">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.706669 -5.581320 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel3_1.stl" />
+      </geometry>
+      <material name="solar_panel3_1_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026779 -0.614025 -0.131702" rpy="-0.000004 1.570794 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_1.stl" />
+      </geometry>
+      <material name="part_1_2_material">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.091921 -1.688280 -1.624662" rpy="-1.540918 0.009481 0.183635" />
+      <geometry>
+        <mesh filename="package://assets/fire3.stl" />
+      </geometry>
+      <material name="fire3_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.447601 -0.685580 -1.486662" rpy="-0.071240 0.102127 2.530869" />
+      <geometry>
+        <mesh filename="package://assets/fire.stl" />
+      </geometry>
+      <material name="fire_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.988299 -0.645580 -1.291922" rpy="-0.000003 0.124446 3.141592" />
+      <geometry>
+        <mesh filename="package://assets/fire1.stl" />
+      </geometry>
+      <material name="fire1_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.256739 -0.350732 -0.776712" rpy="0.012626 0.018474 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_2.stl" />
+      </geometry>
+      <material name="part_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.258911 -1.739270 -1.617892" rpy="2.901769 -1.444703 -2.720246" />
+      <geometry>
+        <mesh filename="package://assets/fire2.stl" />
+      </geometry>
+      <material name="fire2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026779 0.615970 -0.131702" rpy="0.000000 -1.570796 -1.570800" />
+      <geometry>
+        <mesh filename="package://assets/part_1.stl" />
+      </geometry>
+      <material name="part_1_3_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-1.253131 0.173027 -0.788352" rpy="-0.019036 -0.055566 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_2.stl" />
+      </geometry>
+      <material name="part_2_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.256739 0.352682 -0.776702" rpy="3.128969 0.018474 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_2.stl" />
+      </geometry>
+      <material name="part_2_3_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.706779 -0.279025 -0.781702" rpy="1.570794 1.552324 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_1.stl" />
+      </geometry>
+      <material name="part_1_4_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-1.253131 -0.171077 -0.788342" rpy="-3.122549 -0.055566 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part_2.stl" />
+      </geometry>
+      <material name="part_2_4_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.209231 1.712020 -1.623522" rpy="-1.540921 -0.009481 2.957958" />
+      <geometry>
+        <mesh filename="package://assets/fire3.stl" />
+      </geometry>
+      <material name="fire3_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.653221 -0.119025 -0.781702" rpy="-1.570796 -1.515232 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part3.stl" />
+      </geometry>
+      <material name="part3_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.548409 0.000975 0.796689" rpy="-3.059766 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/satelliitedish2.stl" />
+      </geometry>
+      <material name="satelliitedish2_material">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-1.887231 0.647530 -1.651642" rpy="0.000000 -0.124446 0.000000" />
+      <geometry>
+        <mesh filename="package://assets/fire1.stl" />
+      </geometry>
+      <material name="fire1_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-1.059101 5.605270 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel3_1.stl" />
+      </geometry>
+      <material name="solar_panel3_1_2_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.324719 0.926280 1.750521" rpy="3.128965 0.029674 1.570655" />
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl" />
+      </geometry>
+      <material name="satelliitedishbig_3_material">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.653221 0.120975 -0.781702" rpy="-1.570796 1.515234 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/part3.stl" />
+      </geometry>
+      <material name="part3_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026779 2.225240 -0.137682" rpy="1.570796 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_part_2.stl" />
+      </geometry>
+      <material name="solar_part_2_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026779 -2.223290 -0.137682" rpy="1.570799 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_part_2.stl" />
+      </geometry>
+      <material name="solar_part_2_2_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.451941 0.687530 -1.451932" rpy="-3.070355 0.102127 -2.530869" />
+      <geometry>
+        <mesh filename="package://assets/fire.stl" />
+      </geometry>
+      <material name="fire_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.258911 1.741220 -1.617892" rpy="0.239826 -1.444703 2.720246" />
+      <geometry>
+        <mesh filename="package://assets/fire2.stl" />
+      </geometry>
+      <material name="fire2_2_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026779 0.630970 -0.131702" rpy="0.000000 -1.570796 -0.000000" />
+      <geometry>
+        <mesh filename="package://assets/satellite_body.stl" />
+      </geometry>
+      <material name="satellite_body_material">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.324719 -0.924331 1.750521" rpy="3.128965 -0.029676 1.570938" />
+      <geometry>
+        <mesh filename="package://assets/satelliitedishbig.stl" />
+      </geometry>
+      <material name="satelliitedishbig_4_material">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -7.220520 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel4.stl" />
+      </geometry>
+      <material name="solar_panel4_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -7.220520 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel4__2.stl" />
+      </geometry>
+      <material name="solar_panel4_2_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 7.222470 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel4.stl" />
+      </geometry>
+      <material name="solar_panel4_3_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 7.222470 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel4__2.stl" />
+      </geometry>
+      <material name="solar_panel4_4_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 5.585270 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel3.stl" />
+      </geometry>
+      <material name="solar_panel3_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 5.585270 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel3__2.stl" />
+      </geometry>
+      <material name="solar_panel3_2_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -2.308930 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl" />
+      </geometry>
+      <material name="solar_panel_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -2.308930 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl" />
+      </geometry>
+      <material name="solar_panel_2_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 2.310880 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl" />
+      </geometry>
+      <material name="solar_panel_3_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 2.310880 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl" />
+      </geometry>
+      <material name="solar_panel_4_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -5.583320 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel3.stl" />
+      </geometry>
+      <material name="solar_panel3_3_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -5.583320 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel3__2.stl" />
+      </geometry>
+      <material name="solar_panel3_4_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 3.948080 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl" />
+      </geometry>
+      <material name="solar_panel_5_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 3.948080 -0.155222" rpy="-1.570796 0.000004 1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl" />
+      </geometry>
+      <material name="solar_panel_6_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -3.946130 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel.stl" />
+      </geometry>
+      <material name="solar_panel_7_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.026739 -3.946130 -0.155222" rpy="-1.570799 0.000004 -1.570796" />
+      <geometry>
+        <mesh filename="package://assets/solar_panel__2.stl" />
+      </geometry>
+      <material name="solar_panel_8_material">
+        <color rgba="0.05 0.05 0.3 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="com_marker">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7" />
+    </inertial>
+  </link>
+  <joint name="com_marker_fixed" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="thrust_frame" />
+    <child link="com_marker" />
+  </joint>
+</robot>
